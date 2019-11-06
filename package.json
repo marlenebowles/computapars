@@ -2,7 +2,21 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.18.3"
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@storybook/react": "^5.2.5",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.3",
+    "lerna": "^3.18.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "storybook": "^5.1.11",
+    "styled-components": "^4.4.1",
+    "webpack": "^4.41.2"
   },
   "workspaces": [
     "packages/*"

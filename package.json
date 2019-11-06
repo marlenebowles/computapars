@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 5555"
+},
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.0",
@@ -14,7 +17,6 @@
     "lerna": "^3.18.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "storybook": "^5.1.11",
     "styled-components": "^4.4.1",
     "webpack": "^4.41.2"
   },

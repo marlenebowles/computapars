@@ -5,12 +5,13 @@
     "storybook": "start-storybook -p 5555",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "build": "build-storybook -c .storybook -o public"
-},
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@storybook/addon-actions": "^5.2.6",
     "@storybook/react": "^5.2.5",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",

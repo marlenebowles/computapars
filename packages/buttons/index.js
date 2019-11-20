@@ -1,9 +1,9 @@
 import React from 'react';
-
-export default Button = () => {
+export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
     return (
-        <button>
-        </button>
-    )
-}
+      <div className="list-item">
+        <input type="text" value={title} readOnly={true} />
+      </div>
+    );
+  }
 

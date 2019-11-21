@@ -1,25 +1,36 @@
 import styled, { css } from 'styled-components'
 import { colors } from '@computapars/core';
-console.log(colors)
-const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid ${colors.grey1};
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
 
+const BaseButton = styled.button`
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.25em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+// figure out how to dark on hover
+
+const Button = styled(BaseButton)`
   ${props =>
-    props.primary &&
+    props.orange &&
     css`
-      background: palevioletred;
-      color: white;
+      background: ${colors.orange1}
+      color: ${colors.white};
+    `};
+  ${props =>
+    props.blue &&
+    css`
+      background: ${colors.blue1};
+      color: ${colors.white};
     `};
   ${props =>
     props.disabled &&
     css`
-      background: palevioletred;
-      color: white;
+      opacity: 0.25;
+      cursor: not-allowed;
+      color: ${colors.white};
     `};
 `
 export default Button;

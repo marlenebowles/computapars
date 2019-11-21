@@ -1,10 +1,18 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withKnobs } from "@storybook/addon-knobs";
 import Button from './index';
 
+export default {
+  component: Button,
+  title: 'Button',
+  decorators: [withKnobs]
+};
 
-storiesOf('Button', module)
-  .add('regular', () => <Button onClick={action('button-clicked')}>Text</Button>)
-  .add('primary', () => <Button onClick={action('button-clicked')} primary>Text</Button>)
-  .add('disabled', () => <Button disabled>Text</Button>)
+export const blue = () => (
+  <Button blue onClick={action('button-clicked')}>Text</Button>
+);
+
+export const orange = () => (
+  <Button orange onClick={action('button-clicked')}>Text</Button>
+);

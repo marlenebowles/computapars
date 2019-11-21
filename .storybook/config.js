@@ -3,11 +3,10 @@ import { configure, addDecorator, addParameters } from '@storybook/react'
 import baseTheme from './baseTheme';
 import { Normalize } from 'styled-normalize'
 
-const req = require.context('../packages', true, /.story.js$/);
-
 addDecorator(storyFn => 
     (<div style={{
-        paddingTop: '15px'
+        paddingTop: '15px',
+        paddingLeft: '15px'
     }}>
         <Normalize />
         {storyFn()}
@@ -20,8 +19,5 @@ addParameters({
     },
 });
 
-function loadStories() {
-    req.keys().forEach((filename) => req(filename));
-}
-
-configure(loadStories, module); // keep this last
+const req = require.context('../packages', true, /.story.js$/);
+configure(req, module);

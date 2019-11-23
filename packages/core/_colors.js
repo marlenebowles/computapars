@@ -13,6 +13,8 @@ const orangeScale = {
 const blueScale = {
     blue1: '#4076dd'
 }
+
+
 /**
  * color schemas - text
  * darkest gray grey1, use on paragraphs, headings

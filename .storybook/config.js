@@ -1,9 +1,30 @@
-import { configure } from '@storybook/react'
+import React from 'react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
+import baseTheme from './baseTheme';
+import { Normalize } from 'styled-normalize';
 
-const req = require.context('../packages', true, /.story.js$/);
+addDecorator(storyFn => (
+	<div
+		style={{
+			paddingTop: '15px',
+			paddingLeft: '15px',
+		}}
+	>
+		<Normalize />
+		{storyFn()}
+	</div>
+));
 
-function loadStories() {
-    req.keys().forEach((filename) => req(filename));
-}
+addParameters({
+	options: {
+		theme: baseTheme,
+	},
+});
 
-configure(loadStories, module); // keep this last
+const loaderFn = () => {
+	const allExports = [require('./welcomeStory.js')];
+	const req = require.context('../packages', true, /.story.js$/);
+	req.keys().forEach(fname => allExports.push(req(fname)));
+	return allExports;
+};
+configure(loaderFn, module);

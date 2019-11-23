@@ -21,5 +21,10 @@ addParameters({
 	},
 });
 
-const req = require.context('../packages', true, /.story.js$/);
-configure(req, module);
+const loaderFn = () => {
+	const allExports = [require('./welcomeStory.js')];
+	const req = require.context('../packages', true, /.story.js$/);
+	req.keys().forEach(fname => allExports.push(req(fname)));
+	return allExports;
+};
+configure(loaderFn, module);

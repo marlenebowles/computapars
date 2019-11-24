@@ -7,19 +7,25 @@ export default {
 
 export const Paragraphs = () => (
 	<Fragment>
-		<Text>
-			Star stuff harvesting star light vanquish the impossible not a
-			sunrise but a galaxyrise the only home we've ever known hearts of
-			the stars tingling of the spine and billions upon billions upon
-			billions upon billions upon billions upon billions upon billions.
-		</Text>
-		<Text fontSize="xs">
+		<Text variation="intro">
 			Quasar Euclid dispassionate extraterrestrial observer from which we
 			spring rich in heavy atoms worldlets. A mote of dust suspended in a
 			sunbeam are creatures of the cosmos corpus callosum shores of the
 			cosmic ocean brain is the seed of intelligence great turbulent
 			clouds? Radio telescope rings of Uranus invent the universe rings of
 			Uranus dream of the mind's eye star stuff harvesting star light.
+		</Text>
+		<Text>
+			Star stuff harvesting star light vanquish the impossible not a
+			sunrise but a galaxyrise the only home we've ever known hearts of
+			the stars tingling of the spine and billions upon billions upon
+			billions upon billions upon billions upon billions upon billions.
+		</Text>
+		<Text variation="fine">
+			Hearts of the stars globular star cluster light years rings of
+			Uranus science network of wormholes. A very small stage in a vast
+			cosmic arena worldlets great turbulent clouds kindling the energy
+			hidden in matter vanquish the impossible corpus callosum.
 		</Text>
 	</Fragment>
 );

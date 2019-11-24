@@ -9,4 +9,9 @@ export const spacing = {
 		md: '1.25rem',
 		lg: '1.875rem',
 	},
+	gutters: {
+		sm: '0.625rem',
+		md: '1.25rem',
+		lg: '1.875rem',
+	},
 };

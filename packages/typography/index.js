@@ -16,7 +16,7 @@ const getTextVariationSizes = variation => {
 	}
 };
 export const Text = styled.p`
-	font-family: ${typography.type.primary};
+	font-family: ${props => props.theme.fonts.secondary};
     font-weight: ${typography.weight.regular};
     line-height: ${typography.lineHeight.md}
     color: ${colors.gray1};
@@ -28,7 +28,7 @@ export const Text = styled.p`
 `;
 
 const baseHeader = css`
-	font-family: ${typography.type.primary};
+	font-family: ${props => props.theme.fonts.primary};
 	color: ${colors.gray1};
 `;
 

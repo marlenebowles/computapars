@@ -11,28 +11,35 @@ const BaseButton = styled.button`
 	align-items: center;
 	justify-content: center;
 	transition: ${animations.background};
+	font-family: ${props => props.theme.buttons.font};
+	font-weight: ${props => props.theme.buttons.weight};
+	text-transform: uppercase;
+	letter-spacing: ${props => props.theme.buttons.letterSpacing};
 `;
 const Button = styled(BaseButton)`
 	${props =>
-		props.orange &&
+		props &&
+		props.primary &&
 		css`
-      cursor: pointer;
-      background: ${colors.orange1}
-      color: ${colors.white};
-      :hover, :focus {
-        background: ${darken(0.15, colors.orange1)};
-        color: ${darken(0.15, colors.white)};
-      }
+            cursor: pointer;
+            background: ${props.theme.buttons.colors.primary}
+            color: ${colors.white};
+            :hover, :focus {
+                background: ${darken(0.15, props.theme.buttons.colors.primary)};
+            }
     `};
 	${props =>
-		props.blue &&
+		props &&
+		props.secondary &&
 		css`
 			cursor: pointer;
-			background: ${colors.blue1};
+            background: ${props.theme.buttons.colors.secondary}
 			color: ${colors.white};
-			:hover,
-			:focus {
-				background: ${darken(0.15, colors.blue1)};
+			:hover, :focus {
+                background: ${darken(
+					0.15,
+					props.theme.buttons.colors.secondary
+				)};
 			}
 		`};
 `;

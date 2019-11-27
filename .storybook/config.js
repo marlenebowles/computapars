@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import baseTheme from './baseTheme';
 import { Normalize } from 'styled-normalize';
+import { themes } from '@computapars/core';
+import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+import { createGlobalStyle } from 'styled-components';
 
-addDecorator(storyFn => (
-	<div
-		style={{
-			paddingTop: '15px',
-			paddingLeft: '15px',
-		}}
-	>
-		<Normalize />
-		{storyFn()}
-	</div>
-));
+addDecorator(withThemesProvider([themes.bossy, themes.space, themes.discord]));
+addDecorator(storyFn => {
+	const GlobalStyle = createGlobalStyle`
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800|Source+Sans+Pro:400,700,900');
+        @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato:400,400i,700,900');
+        @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&Montserrat+Subrayada:400,700|Montserrat:400,700,900');
+    `;
+	return (
+		<Fragment>
+			<GlobalStyle />
+			<Normalize />
+			{storyFn()}
+		</Fragment>
+	);
+});
 
 addParameters({
 	options: {
-		theme: baseTheme,
-		showPanel: false,
 		isToolshown: false,
 		enableShortcuts: false,
+		theme: baseTheme,
 	},
 });
 

@@ -1,27 +1,23 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import React, {Fragment } from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import baseTheme from './baseTheme';
 import { Normalize } from 'styled-normalize';
 import { themes } from "@computapars/core";
-import {withThemesProvider} from 'storybook-addon-styled-component-theme';
+import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 
-addDecorator(storyFn => {
-	const themeChosen = withThemesProvider(themes)
-	return (
-		<ThemeProvider theme={themeChosen}>
-			<Normalize />
-			{storyFn()}
-		</ThemeProvider>
-	)
-});
+addDecorator(withThemesProvider([themes.space, themes.bossy, themes.pharmacy]));
+addDecorator(storyFn => (
+	<Fragment>
+		<Normalize />
+		{storyFn()}
+	</Fragment>
+));
 
 	
 
 addParameters({
 	options: {
 		theme: baseTheme,
-		showPanel: false,
 		isToolshown: false,
 		enableShortcuts: false,
 	},

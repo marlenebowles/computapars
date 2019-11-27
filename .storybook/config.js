@@ -1,19 +1,22 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import baseTheme from './baseTheme';
 import { Normalize } from 'styled-normalize';
+import { themes } from "@computapars/core";
+import {withThemesProvider} from 'storybook-addon-styled-component-theme';
 
-addDecorator(storyFn => (
-	<div
-		style={{
-			paddingTop: '15px',
-			paddingLeft: '15px',
-		}}
-	>
-		<Normalize />
-		{storyFn()}
-	</div>
-));
+addDecorator(storyFn => {
+	const themeChosen = withThemesProvider(themes)
+	return (
+		<ThemeProvider theme={themeChosen}>
+			<Normalize />
+			{storyFn()}
+		</ThemeProvider>
+	)
+});
+
+	
 
 addParameters({
 	options: {

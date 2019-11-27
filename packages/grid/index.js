@@ -2,8 +2,6 @@ import styled, { css } from 'styled-components';
 import { media, spacing } from '@computapars/core';
 import PropTypes from 'prop-types';
 
-// how do we set up the margins?
-
 const BaseGridContainer = styled.div`
 	display: ${props => (props.inline ? 'inline-grid' : 'grid')};
 	grid-column-gap: ${spacing.gutters.sm};
@@ -18,6 +16,8 @@ const BaseGridContainer = styled.div`
 			padding: ${props.padding && props.padding[0]
 				? props.padding[0]
 				: spacing.padding.sm};
+			justify-content: ${props.justify && props.justify};
+			align-items: ${props.align && props.align};
 			${media.greaterThan('sm')`
                 padding: ${
 					props.padding && props.padding[1]
@@ -50,17 +50,17 @@ export const FixedGridContainer = styled(BaseGridContainer)`
 		return css`
 			grid-template-columns: ${props.cols &&
 				props.cols[0] &&
-				props.cols.join('')};
+				props.cols[0].join(' ')};
 			${media.greaterThan('sm')`
                 grid-template-columns: ${props.cols &&
 					props.cols[1] &&
-					props.cols.join('')};
+					props.cols[1].join(' ')};
             `}
 		`;
 	}};
 `;
 
-const BaseGridItem = styled.div`
+export const GridItem = styled.div`
 	${props => {
 		return css`
 			background-color: ${props.background
@@ -69,29 +69,15 @@ const BaseGridItem = styled.div`
 			padding: ${props.padding && props.padding[0]
 				? props.padding[0]
 				: spacing.padding.sm};
+			justify-self: ${props.justify && props.justify};
+			align-self: ${props.align && props.align};
 			${media.greaterThan('sm')`
-                padding: ${
+				padding: ${
 					props.padding && props.padding[1]
 						? props.padding[1]
 						: spacing.padding.md
 				};
-            `}
-		`;
-	}}
-`;
-
-export const GridItem = styled(BaseGridItem)`
-	${props => {
-		return css`
-			${props.start &&
-				`
-                grid-column-start: ${props.start};
-                justify-self: start;
-            `}
-			${props.end &&
-				`
-                grid-column-end: ${props.end};
-            `}
+			`}
 		`;
 	}}
 `;
@@ -100,7 +86,6 @@ FixedGridContainer.propTypes = {
 	background: PropTypes.string,
 	padding: PropTypes.array,
 	cols: PropTypes.array,
-	inline: PropTypes.bool,
 	align: PropTypes.string,
 	justify: PropTypes.string,
 };
@@ -117,8 +102,6 @@ FluidGridContainer.propTypes = {
 GridItem.propTypes = {
 	background: PropTypes.string,
 	padding: PropTypes.array,
-	start: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-	end: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	align: PropTypes.string,
 	justify: PropTypes.string,
 };

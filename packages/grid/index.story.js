@@ -1,6 +1,6 @@
 import React from 'react';
 import { FluidGridContainer, FixedGridContainer, GridItem } from './index';
-import { colors, spacing } from '@computapars/core';
+import { colors } from '@computapars/core';
 
 export default {
 	title: 'Grids',
@@ -9,7 +9,7 @@ export default {
 export const fluidGridContainer = () => (
 	<FluidGridContainer
 		cols={[2, 4]}
-		padding={('none', 'none')}
+		padding={['none', 'none']}
 		background={colors.grey1}
 	>
 		<GridItem background={colors.grey3}>Stars</GridItem>
@@ -19,32 +19,14 @@ export const fluidGridContainer = () => (
 	</FluidGridContainer>
 );
 
-export const fluidGridStartEnd = () => (
-	<FluidGridContainer background={colors.grey1} cols={[1, 4]}>
-		<GridItem background={colors.grey3} start={'span 2'}>
-			Stars
-		</GridItem>
-		<GridItem background={colors.grey3}>Planets</GridItem>
-		<GridItem background={colors.grey3}>Constellations</GridItem>
-	</FluidGridContainer>
-);
-
-export const fluidGridSpan = () => (
-	<FluidGridContainer cols={[4]}>
-		<GridItem background={colors.grey3} span={'span 2'}>
-			Stars
-		</GridItem>
-		<GridItem background={colors.grey3}>Planets</GridItem>
-	</FluidGridContainer>
-);
 
 export const fixedGridContainer = () => (
 	<FixedGridContainer
 		cols={[
-			['100px', 'auto', 'auto'],
-			['500px', 'auto', 'auto'],
+			['100px', '1fr', '1fr'],
+			['2fr', '1fr', '1fr'],
 		]}
-		padding={('none', 'none')}
+		padding={['none', 'none']}
 		background={colors.grey1}
 	>
 		<GridItem background={colors.grey3}>Stars</GridItem>

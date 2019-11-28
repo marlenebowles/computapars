@@ -1,35 +1,24 @@
 import styled, { css } from 'styled-components';
-import { typography, media, colors } from '@computapars/core';
+import { typography, media } from '@computapars/core';
 
-const getTextVariationSizes = variation => {
-	if (variation == 'fine') {
-		return css`
-			font-size: ${typography.size.xs};
-		`;
-	} else if (variation == 'intro') {
-		return css`
-			font-size: ${typography.size.md};
-			${media.greaterThan('sm')`
-                font-size: ${typography.size.lg};
-            `}
-		`;
-	}
-};
 export const Text = styled.p`
 	font-family: ${props => props.theme.fonts.secondary};
     font-weight: ${typography.weight.regular};
     line-height: ${typography.lineHeight.md}
-    color: ${colors.gray1};
-    font-size: ${typography.size.sm};
+    color: ${props => props.theme.colors.gray1};
+    font-size: ${props =>
+		props.variation === 'fine' ? typography.size.xs : typography.size.md};
     ${media.greaterThan('sm')`
-        font-size: ${typography.size.md};
+        font-size: ${props =>
+			props.variation === 'fine'
+				? typography.size.xs
+				: typography.size.md};
     `}
-    ${props => props.variation && getTextVariationSizes(props.variation)}
 `;
 
 const baseHeader = css`
 	font-family: ${props => props.theme.fonts.primary};
-	color: ${colors.gray1};
+	color: ${props => props.theme.colors.gray1};
 `;
 
 export const H1 = styled.h1`

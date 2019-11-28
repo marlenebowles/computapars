@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors, animations } from '@computapars/core';
+import { animations } from '@computapars/core';
 import { darken } from 'polished';
 
 const BaseButton = styled.button`
@@ -23,7 +23,7 @@ const Button = styled(BaseButton)`
 		css`
             cursor: pointer;
             background: ${props.theme.buttons.colors.primary}
-            color: ${colors.white};
+            color: white;
             :hover, :focus {
                 background: ${darken(0.15, props.theme.buttons.colors.primary)};
             }
@@ -34,7 +34,7 @@ const Button = styled(BaseButton)`
 		css`
 			cursor: pointer;
             background: ${props.theme.buttons.colors.secondary}
-			color: ${colors.white};
+			color: white;
 			:hover, :focus {
                 background: ${darken(
 					0.15,

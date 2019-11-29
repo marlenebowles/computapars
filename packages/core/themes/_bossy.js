@@ -27,6 +27,7 @@ const colors = {
 	border: palette.grey4,
 	text: palette.grey1,
 	disabled: palette.grey5,
+	divider: palette.grey4,
 };
 
 const buttons = {

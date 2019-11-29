@@ -9,8 +9,8 @@ export default {
 
 export const inputs = () => (
 	<Fragment>
-		<Label>Label</Label>
-		<Input placeholder="Input" />
+		<Label for="label-ex">Label</Label>
+		<Input id="label-ex" placeholder="Input" />
 		<Input icon={<SearchIcon size={20} />} placeholder="With Icon Right" />
 		<Input disabled />
 	</Fragment>
@@ -18,10 +18,10 @@ export const inputs = () => (
 
 export const forms = () => (
 	<Form>
-		<Label>Email</Label>
-		<Input placeholder="Email" />
-		<Label>Password</Label>
-		<Input placeholder="Password" />
+		<Label for="email">Email</Label>
+		<Input id="email" placeholder="Email" />
+		<Label for="password">Password</Label>
+		<Input id="password" placeholder="Password" />
 		<Button primary type="submit">
 			Submit
 		</Button>

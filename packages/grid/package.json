@@ -1,6 +1,6 @@
 {
 	"name": "@computapars/grid",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -10,7 +10,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@computapars/core": "^1.0.0",
+		"@computapars/core": "^0.0.0",
 		"polished": "^3.4.2",
 		"prop-types": "^15.7.2",
 		"react": "^16.12.0",

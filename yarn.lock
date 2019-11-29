@@ -2134,7 +2134,7 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@5.2.6":
+"@storybook/addons@5.2.6", "@storybook/addons@^5.2.6":
   version "5.2.6"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.6.tgz#c1278137acb3502e068b0b0d07a8371c607e9c02"
   integrity sha512-5MF64lsAhIEMxTbVpYROz5Wez595iwSw45yXyP8gWt12d+EmFO5tdy7cYJCxcMuVhDfaCI78tFqS9orr1atVyA==
@@ -8162,6 +8162,11 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+microns@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/microns/-/microns-1.0.4.tgz#032b9275eae819c40370a1b6f61cc8f7aa1acd7b"
+  integrity sha512-ng9m87wU8BCeZ4tVz4grjYmVtmtPVkm2Dq1m/6jpdGe9e81htO7kuwQ06SWpRuvFKq7VX3meDTRg0KJZLDQYPA==
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -10650,6 +10655,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+
+simple-icons@^1.20.0:
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-1.20.0.tgz#08a98d405256890db6d3a9caf6291b8d60365a67"
+  integrity sha512-J/lP0ajPp74vL4gWXzqkuFlMX09u6gkJJ5UvqkeEqVi0TJe1EmkSUfFsq035HLX8MrBMDW5oa1G0Kydmrd128g==
 
 simplebar-react@^1.0.0-alpha.6:
   version "1.2.3"

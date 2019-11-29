@@ -1,19 +1,29 @@
 import styled, { css } from 'styled-components';
 import { typography, media } from '@computapars/core';
 
-export const Text = styled.p`
+export const BaseText = styled.p`
 	font-family: ${props => props.theme.fonts.secondary};
     font-weight: ${typography.weight.regular};
     line-height: ${typography.lineHeight.md}
     color: ${props => props.theme.colors.gray1};
-    font-size: ${props =>
-		props.variation === 'fine' ? typography.size.xs : typography.size.md};
-    ${media.greaterThan('sm')`
-        font-size: ${props =>
-			props.variation === 'fine'
-				? typography.size.xs
-				: typography.size.md};
+`;
+
+export const Text = styled(BaseText)`
+	font-size: ${typography.size.sm};
+	${media.greaterThan('sm')`
+        font-size: ${typography.size.md};
     `}
+`;
+
+export const IntroText = styled(BaseText)`
+	font-size: ${typography.size.md};
+	${media.greaterThan('sm')`
+        font-size: ${typography.size.lg};
+    `}
+`;
+
+export const FineText = styled(BaseText)`
+	font-size: ${typography.size.xs};
 `;
 
 const baseHeader = css`

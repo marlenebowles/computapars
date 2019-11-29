@@ -12,6 +12,7 @@ import {
 	LaunchIcon,
 	NoteAddIcon,
 	TodayIcon,
+	SearchIcon,
 	TrendingFlatIcon,
 	FastForwardIcon,
 	FastRewindIcon,
@@ -70,6 +71,7 @@ export const icons = () => (
 		<CreateIcon hover size={'24'} />
 		<ClearIcon hover size={'24'} />
 		<FilterListIcon hover size={'24'} />
+		<SearchIcon hover size={'24'} />
 		<RemoveIcon hover size={'24'} />
 		<RemoveCircleIcon hover size={'24'} />
 		<RemoveCircleOutlineIcon hover size={'24'} />

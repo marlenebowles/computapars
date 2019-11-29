@@ -18,6 +18,7 @@ import {
 	FastForward,
 	FastRewind,
 	Loop,
+	Search,
 	Repeat,
 	AddCircle,
 	AddCircleOutline,
@@ -146,6 +147,10 @@ export const RemoveCircleIcon = styled(RemoveCircle)`
 `;
 
 export const RemoveCircleOutlineIcon = styled(RemoveCircleOutline)`
+	${baseIcon};
+`;
+
+export const SearchIcon = styled(Search)`
 	${baseIcon};
 `;
 

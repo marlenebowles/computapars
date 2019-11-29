@@ -1,0 +1,12 @@
+{
+	"name": "@computapars/icon",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"styled-components": "^4.4.1",
+		"styled-icons": "^9.0.1"
+	}
+}

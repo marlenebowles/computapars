@@ -3,17 +3,11 @@ import styled, { css } from 'styled-components';
 import { border, spacing, typography, animations } from '@computapars/core';
 import { lighten, darken } from 'polished';
 
-export const InputWrapper = styled.div`
-	width: 100%;
-	margin-bottom: ${spacing.margin.sm};
-	position: relative;
-`;
-
 const InputField = styled.input`
 	font-family: ${props => props.theme.fonts.secondary};
 	color: ${props => props.theme.colors.input};
 	height: 40px;
-	width: 100%;
+	width: ${props => (props.fullwidth ? '100%' : 'auto')};
 	border: 1px solid ${props => props.theme.colors.border};
 	${props =>
 		props.error &&
@@ -42,11 +36,17 @@ const InputField = styled.input`
 	transition: ${animations.all};
 `;
 
-export const ErrorText = styled.span`
+export const ErrorText = styled.div`
 	color: ${props => props.theme.colors.error};
 	font-size: ${typography.size.xs};
 	font-family: ${props => props.theme.fonts.secondary};
 `;
+
+export const InputWrapper = styled.div`
+	position: relative;
+	width: 100%;
+`;
+
 export const IconWrapper = styled.div`
 	position: absolute;
 	top: 10px;
@@ -54,8 +54,6 @@ export const IconWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-	display: flex;
-	flex-direction: column;
 	color: ${props => props.theme.colors.text};
 	font-family: ${props => props.theme.fonts.primary};
 	font-size: ${typography.size.md};
@@ -70,14 +68,45 @@ export const Form = styled.form`
 	flex-direction: column;
 `;
 
+export const FormGroup = styled.div`
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    ${props =>
+		props.margin &&
+		css`
+			margin-top: ${props => (props.margin[0] ? props.margin[0] : '0')};
+			margin-right: ${props => (props.margin[1] ? props.margin[1] : '0')};
+			margin-left: ${props => (props.margin[3] ? props.margin[3] : '0')};
+		`}
+	margin-bottom: ${props =>
+		props.margin && props.margin[1] ? props.margin[1] : spacing.margin.md};
+	position: relative;
+`;
+
+export const InputGroup = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+`;
+
+export const FormGroupInline = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	flex-wrap: wrap;
+`;
+
 export const Input = props => {
 	return (
-		<Fragment>
-			<InputWrapper {...props.error}>
+		<InputGroup {...props}>
+			<Label for={props.id}>{props.label}</Label>
+			<InputWrapper>
 				{props.icon && <IconWrapper>{props.icon}</IconWrapper>}
 				<InputField {...props} />
 				{props.error && <ErrorText>{props.error}</ErrorText>}
 			</InputWrapper>
-		</Fragment>
+		</InputGroup>
 	);
 };

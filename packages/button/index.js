@@ -10,6 +10,7 @@ const BaseButton = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: ${props => (props.type == 'submit' ? '40px' : 'auto')};
 	transition: ${animations.background};
 	font-family: ${props => props.theme.buttons.font};
 	font-weight: ${props => props.theme.buttons.weight};

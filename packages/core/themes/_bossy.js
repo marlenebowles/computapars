@@ -17,11 +17,11 @@ const palette = {
 	white: '#fff',
 	orange1: '#FF462D',
 	blue1: '#4076dd',
+	red: '#de2362',
 };
 
 const colors = {
-	error: '#',
-	success: '#',
+	error: palette.red,
 	input: palette.grey2,
 	focus: palette.blue1,
 	border: palette.grey4,

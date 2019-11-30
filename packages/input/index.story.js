@@ -11,8 +11,9 @@ export const inputs = () => (
 	<Fragment>
 		<Label for="label-ex">Label</Label>
 		<Input id="label-ex" placeholder="Input" />
-		<Input icon={<SearchIcon size={20} />} placeholder="With Icon Right" />
+		<Input icon={<SearchIcon size={20} />} placeholder="With Icon" />
 		<Input disabled />
+		<Input error={['Email is incorrect']} />
 	</Fragment>
 );
 

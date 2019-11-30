@@ -48,7 +48,7 @@ const baseIcon = css`
 	${props => {
 		const color = props.color
 			? props.color
-			: props.theme.buttons.colors.primary;
+			: props.theme.buttons.colors.secondary;
 		return css`
 			color: ${color};
 			${props.hover &&

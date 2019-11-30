@@ -15,6 +15,11 @@ const InputField = styled.input`
 	height: 40px;
 	width: 100%;
 	border: 1px solid ${props => props.theme.colors.border};
+	${props =>
+		props.error &&
+		css`
+			border: 1px solid ${props.theme.colors.error};
+		`};
 	background-color: white;
 	padding-top: 0;
 	padding-bottom: 0;
@@ -25,7 +30,11 @@ const InputField = styled.input`
 	border-radius: ${border.radius.default};
 	&:focus {
 		outline-offset: -${border.radius.default};
-		border: 1px solid ${props => lighten(0.2, props.theme.colors.focus)};
+		border: 1px solid
+			${props =>
+				props.error
+					? props.theme.colors.error
+					: lighten(0.2, props.theme.colors.focus)};
 	}
 	&:disabled {
 		background-color: ${props => darken(0.02, props.theme.colors.disabled)};
@@ -33,6 +42,11 @@ const InputField = styled.input`
 	transition: ${animations.all};
 `;
 
+export const ErrorText = styled.span`
+	color: ${props => props.theme.colors.error};
+	font-size: ${typography.size.xs};
+	font-family: ${props => props.theme.fonts.secondary};
+`;
 export const IconWrapper = styled.div`
 	position: absolute;
 	top: 10px;
@@ -59,9 +73,10 @@ export const Form = styled.form`
 export const Input = props => {
 	return (
 		<Fragment>
-			<InputWrapper>
+			<InputWrapper {...props.error}>
 				{props.icon && <IconWrapper>{props.icon}</IconWrapper>}
 				<InputField {...props} />
+				{props.error && <ErrorText>{props.error}</ErrorText>}
 			</InputWrapper>
 		</Fragment>
 	);

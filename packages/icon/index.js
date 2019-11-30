@@ -25,6 +25,8 @@ import {
 	Create,
 	Clear,
 	FilterList,
+	RadioButtonChecked,
+	RadioButtonUnchecked,
 	Remove,
 	RemoveCircle,
 	RemoveCircleOutline,
@@ -150,6 +152,12 @@ export const RemoveCircleOutlineIcon = styled(RemoveCircleOutline)`
 	${baseIcon};
 `;
 
+export const RadioButtonCheckedIcon = styled(RadioButtonChecked)`
+	${baseIcon};
+`;
+export const RadioButtonUncheckedIcon = styled(RadioButtonUnchecked)`
+	${baseIcon};
+`;
 export const SearchIcon = styled(Search)`
 	${baseIcon};
 `;

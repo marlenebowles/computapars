@@ -26,6 +26,8 @@ import {
 	RemoveIcon,
 	RemoveCircleIcon,
 	RemoveCircleOutlineIcon,
+	RadioButtonCheckedIcon,
+	RadioButtonUncheckedIcon,
 	BootstrapIcon,
 	GitIcon,
 	GithubIcon,
@@ -75,6 +77,8 @@ export const icons = () => (
 		<RemoveIcon hover size={'24'} />
 		<RemoveCircleIcon hover size={'24'} />
 		<RemoveCircleOutlineIcon hover size={'24'} />
+		<RadioButtonCheckedIcon hover size={'24'} />
+		<RadioButtonUncheckedIcon hover size={'24'} />
 		<BootstrapIcon hover size={'24'} />
 		<GitIcon hover size={'24'} />
 		<GithubIcon hover size={'24'} />

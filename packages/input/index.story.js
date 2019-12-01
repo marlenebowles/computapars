@@ -1,12 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import {
-	Input,
-	Form,
-	FormGroup,
-	FormGroupInline,
-	Checkbox,
-	RadioButton,
-} from './index';
+import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
 import { spacing } from '@computapars/core';
 import { SearchIcon } from './../icon';
 
@@ -88,48 +81,13 @@ export const checkBoxes = () => {
 	return (
 		<Fragment>
 			{checkBoxes.map(item => (
-				<Checkbox
-					name={item.name}
-					key={item.key}
-					label={item.label}
-					checked={checkedItems[item.name]}
-					onChange={handleChange}
-				/>
-			))}
-		</Fragment>
-	);
-};
-
-export const radioButtons = () => {
-	const [checkedItems, setCheckedItems] = useState({});
-	const radioButtons = [
-		{
-			name: 'radio-1',
-			key: 'radio1',
-			label: 'radio 1',
-		},
-		{
-			name: 'radio-2',
-			key: 'radio2',
-			label: 'radio 2',
-		},
-	];
-	const handleChange = event => {
-		setCheckedItems({
-			checkedItems: event.target.name,
-		});
-	};
-	return (
-		<Fragment>
-			{radioButtons.map(item => (
 				<FormGroup key={item.key}>
-					<RadioButton
-						type="radio"
+					<Checkbox
 						name={item.name}
 						key={item.key}
 						label={item.label}
+						checked={checkedItems[item.name]}
 						onChange={handleChange}
-						checked={checkedItems == item.name}
 					/>
 				</FormGroup>
 			))}

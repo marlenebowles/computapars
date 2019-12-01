@@ -107,6 +107,8 @@ export const FormGroupInline = styled.div`
 const CheckboxContainer = styled.div`
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: ${spacing.margin.sm};
+	position: relative;
 `;
 
 const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
@@ -114,56 +116,29 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
 `;
 
 const StyledCheckbox = styled.div`
-    display: inline-block;
     width: 16px;
     height: 16px;
-    background: ${props => (props.checked ? 'salmon' : 'papayawhip')}
+    border: 1px solid ${props => props.theme.colors.border};
+    background: ${props => (props.checked ? props.theme.colors.focus : 'white')}
     border-radius: 3px;
     transition: all 150ms;
 
     ${HiddenCheckbox}:focus + & {
-        box-shadow: 0 0 0 3px pink;
+        box-shadow: 0 0 0 1px ${props => props.theme.colors.border};
     }
 
     ${DoneIcon} {
         visibility: ${props => (props.checked ? 'visible' : 'hidden')}
+        color: white;
+        position: absolute;
     }
 `;
 
-const RadioContainer = styled.div`
-	display: inline-block;
-	vertical-align: middle;
-`;
-
-const HiddenRadio = styled.input.attrs({ type: 'radio' })`
-	${hideVisually()}
-`;
-
-const StyledRadio = styled.div`
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	background: white;
-	border-radius: 3px;
-	transition: all 150ms;
-	${HiddenRadio}:focus + & {
-		box-shadow: 0 0 0 1px pink;
-		border-radius: 50%;
-	}
-
-	${RadioButtonUncheckedIcon} {
-		visibility: ${props => (!props.checked ? 'visible' : 'hidden')};
-	}
-	${RadioButtonCheckedIcon} {
-		visibility: ${props => (props.checked ? 'visible' : 'hidden')};
-	}
-`;
-
 export const Checkbox = ({ checked, ...props }) => (
-	<Label>
+	<Label htmlFor={props.id}>
 		<CheckboxContainer>
-			<HiddenCheckbox checked={checked} {...props} />
-			<StyledCheckbox checked={checked}>
+			<HiddenCheckbox checked={checked || false} {...props} />
+			<StyledCheckbox checked={checked || false}>
 				<DoneIcon size={16} />
 			</StyledCheckbox>
 		</CheckboxContainer>
@@ -171,23 +146,10 @@ export const Checkbox = ({ checked, ...props }) => (
 	</Label>
 );
 
-export const RadioButton = ({ checked, ...props }) => (
-	<Label>
-		<RadioContainer>
-			<HiddenRadio checked={checked} {...props} />
-			<StyledRadio checked={checked}>
-				<RadioButtonUncheckedIcon size={16} />
-				<RadioButtonCheckedIcon size={16} />
-			</StyledRadio>
-		</RadioContainer>
-		{props.label}
-	</Label>
-);
-
 export const Input = props => {
 	return (
 		<InputGroup {...props}>
-			<Label for={props.id}>{props.label}</Label>
+			<Label htmlFor={props.id}>{props.label}</Label>
 			<InputWrapper>
 				{props.icon && <IconWrapper>{props.icon}</IconWrapper>}
 				<InputField {...props} />

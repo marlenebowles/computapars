@@ -1,0 +1,53 @@
+import React, { Fragment, useState } from 'react';
+import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
+import { spacing } from '@computapars/core';
+
+export default {
+	title: 'Components | Input',
+};
+
+export const inputs = () => (
+	<Fragment>
+		<FormGroup>
+			<Input fullwidth label="Input" id="input-ex" placeholder="Input" />
+		</FormGroup>
+		<FormGroup>
+			<Input label="disabled" id="disabled" disabled />
+		</FormGroup>
+		<FormGroup>
+			<Input label="Error" id="error" error={['Email is incorrect']} />
+		</FormGroup>
+	</Fragment>
+);
+
+export const forms = () => (
+	<Form>
+		<FormGroup>
+			<Input label="Email" fullwidth id="email" placeholder="Email" />
+		</FormGroup>
+		<FormGroup>
+			<Input
+				label="Password"
+				fullwidth
+				id="password"
+				placeholder="Password"
+			/>
+		</FormGroup>
+		<FormGroupInline>
+			<FormGroup margin={[0, spacing.margin.md, 0, 0]}>
+				<Input
+					id="first-name"
+					label="First Name"
+					placeholder="First Name"
+				/>
+			</FormGroup>
+			<FormGroup>
+				<Input
+					id="last-name"
+					label="Last Name"
+					placeholder="Last Name"
+				/>
+			</FormGroup>
+		</FormGroupInline>
+	</Form>
+);

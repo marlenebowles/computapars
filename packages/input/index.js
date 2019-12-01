@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
-// import { DoneIcon } from '@computapars/icon';
-import { lighten, darken, hideVisually } from 'polished';
 
 import { border, spacing, typography, animations } from '@computapars/core';
 import { lighten, darken, hideVisually } from 'polished';
@@ -55,17 +53,6 @@ export const IconWrapper = styled.div`
 	top: 10px;
 	right: 10px;
 `;
-
-export const Label = styled.label`
-	color: ${props => props.theme.colors.text};
-	font-family: ${props => props.theme.fonts.primary};
-	font-size: ${typography.size.md};
-	font-weight: ${typography.weight.bold};
-	margin-bottom: ${spacing.margin.sm};
-	text-transform: uppercase;
-	line-height: ${typography.lineHeight.sm};
-`;
-
 export const Form = styled.form`
 	display: flex;
 	flex-direction: column;
@@ -87,13 +74,6 @@ export const FormGroup = styled.div`
 	position: relative;
 `;
 
-export const InputGroup = styled.div`
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	position: relative;
-`;
-
 export const FormGroupInline = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -101,41 +81,21 @@ export const FormGroupInline = styled.div`
 	flex-wrap: wrap;
 `;
 
-const CheckboxContainer = styled.div`
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: ${spacing.margin.sm};
+export const Label = styled.label`
+	color: ${props => props.theme.colors.text};
+	font-family: ${props => props.theme.fonts.primary};
+	font-size: ${typography.size.md};
+	font-weight: ${typography.weight.bold};
+	margin-bottom: ${spacing.margin.sm};
+	text-transform: uppercase;
+	line-height: ${typography.lineHeight.sm};
+`;
+export const InputGroup = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	position: relative;
 `;
-
-const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
-	${hideVisually()}
-`;
-
-const StyledCheckbox = styled.div`
-    width: 16px;
-    height: 16px;
-    border: 1px solid ${props => props.theme.colors.border};
-    background: ${props => (props.checked ? props.theme.colors.focus : 'white')}
-    border-radius: 3px;
-    transition: all 150ms;
-
-    ${HiddenCheckbox}:focus + & {
-        box-shadow: 0 0 0 1px ${props => props.theme.colors.border};
-    }
-
-   
-`;
-
-export const Checkbox = ({ checked, ...props }) => (
-	<Label htmlFor={props.id}>
-		<CheckboxContainer>
-			<HiddenCheckbox checked={checked || false} {...props} />
-			<StyledCheckbox checked={checked || false}></StyledCheckbox>
-		</CheckboxContainer>
-		{props.label}
-	</Label>
-);
 
 export const Input = props => {
 	return (

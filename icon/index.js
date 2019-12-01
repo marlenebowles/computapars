@@ -46,7 +46,7 @@ import {
 	Youtube,
 } from 'styled-icons/boxicons-logos';
 
-const baseIcon = css`
+const baseIcon = () => css`
 	${props => {
 		const color = props.color ? props.color : props.theme.colors.secondary;
 		return css`

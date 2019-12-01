@@ -37,7 +37,7 @@ const Button = styled(BaseButton)`
             background: ${props.theme.buttons.secondary}
 			color: white;
 			:hover, :focus {
-                background: ${darken(0.15, props.theme.buttons.secondary)};
+                background: ${darken(0.15, props.theme.colors.secondary)};
 			}
 		`};
 `;

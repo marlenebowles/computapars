@@ -5,7 +5,7 @@ export default {
 	title: 'Components | Typography',
 };
 
-const Paragraphs = () => (
+export const Paragraphs = () => (
 	<Fragment>
 		<IntroText>
 			Quasar Euclid dispassionate extraterrestrial observer from which we
@@ -30,7 +30,7 @@ const Paragraphs = () => (
 	</Fragment>
 );
 
-const Headings = () => (
+export const Headings = () => (
 	<Fragment>
 		<H1>We are the legacy of 15 billion years of cosmic evolution.</H1>
 		<H2>We are the legacy of 15 billion years of cosmic evolution.</H2>
@@ -39,17 +39,4 @@ const Headings = () => (
 		<H5>We are the legacy of 15 billion years of cosmic evolution.</H5>
 		<H6>We are the legacy of 15 billion years of cosmic evolution.</H6>
 	</Fragment>
-);
-
-export const Typography = () => (
-	<div>
-		<H3>Headings</H3>
-		<Headings />
-		<H3>Paragraphs</H3>
-		<IntroText>
-			Paragraphs are blocks of text separated from adjacent blocks by
-			blank lines
-		</IntroText>
-		<Paragraphs />
-	</div>
 );

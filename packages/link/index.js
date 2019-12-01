@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { animations } from '@computapars/core';
-
+import { darken } from 'polished';
 const BaseLink = styled.a`
     display: inline-block;
     transition: ${animations.all}

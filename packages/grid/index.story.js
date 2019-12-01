@@ -2,7 +2,7 @@ import React from 'react';
 import { FluidGridContainer, FixedGridContainer, GridItem } from './index';
 
 export default {
-	title: 'Grids',
+	title: 'Components | Grid',
 };
 
 export const fluidGridContainer = () => (
@@ -28,3 +28,5 @@ export const fixedGridContainer = () => (
 		<GridItem>Galaxies</GridItem>
 	</FixedGridContainer>
 );
+
+export const defaultView = () => <div>Kittens</div>;

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Divider } from './index';
 export default {
-	title: 'Layout',
+	title: 'Components | Layout',
 };
 
 export const divider = () => (

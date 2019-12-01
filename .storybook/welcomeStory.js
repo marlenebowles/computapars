@@ -1,19 +1,30 @@
-// import React from 'react';
-// import { Text, H1, H3 } from '@computapars/type';
+import React, { Fragment } from 'react';
+import { Text, H1, H3, H5 } from '@computapars/typography';
+import { GithubIcon } from '@computapars/icon';
+import { Link } from '@computapars/link';
 
-// export default {
-// 	title: 'Welcome',
-// 	decorators: [
-// 		storyFn => <div style={{ backgroundColor: 'yellow' }}>{storyFn()}</div>,
-// 	],
-// 	addParameters: {
-// 		panelPosition: 'top',
-// 	},
-// };
+export default {
+	title: 'Computapars | About',
+	decorators: [
+		storyFn => <div style={{ backgroundColor: 'yellow' }}>{storyFn()}</div>,
+	],
+	addParameters: {
+		panelPosition: 'top',
+	},
+};
 
-// export const welcome = () => (
-// 	<Fragment>
-// 		<H1>Text</H1>
-// 		<Text>Some Text</Text>
-// 	</Fragment>
-// );
+export const welcome = () => (
+	<Fragment>
+		<H1>Computapars</H1>
+		<H3>Latin: computa * pars</H3>
+		<H5>
+			<Link>
+				Source: <GithubIcon hover size={24} />
+			</Link>
+		</H5>
+		<Text>
+			A reusable component library that is designed and engineered to help
+			build personal projects faster.
+		</Text>
+	</Fragment>
+);

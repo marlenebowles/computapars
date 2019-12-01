@@ -3,7 +3,7 @@ import Button from './index';
 
 export default {
 	component: Button,
-	title: 'Button',
+	title: 'Components | Button',
 };
 
 export const primaryButton = () => <Button primary>Primary Button</Button>;

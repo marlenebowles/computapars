@@ -43,7 +43,7 @@ import {
 } from './index';
 
 export default {
-	title: 'Icon',
+	title: 'Components | Icon',
 };
 
 export const icons = () => (

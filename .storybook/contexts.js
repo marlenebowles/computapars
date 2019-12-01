@@ -1,6 +1,6 @@
 import { themes } from '@computapars/core';
 import { ThemeProvider } from 'styled-components';
-
+import { DefaultLayout } from '@computapars/layout';
 ThemeProvider.defaultProps = {
 	theme: {},
 };
@@ -10,9 +10,8 @@ export const contexts = [
 		title: 'Themes', // an unique name of a contextual environment
 		components: [
 			// an array of components that is going to be injected to wrap stories
-			/* Styled-components ThemeProvider, */
+			DefaultLayout,
 			ThemeProvider,
-			/* Material-ui ThemeProvider, */
 		],
 		params: [
 			// an array of params contains a set of predefined `props` for `components`
@@ -29,5 +28,4 @@ export const contexts = [
 			cancelable: false, // allow this contextual environment to be opt-out optionally in toolbar
 		},
 	},
-	/* ... */ // multiple contexts setups are supported
 ];

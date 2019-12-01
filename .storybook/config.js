@@ -5,10 +5,6 @@ import { Normalize } from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
 import { withContexts } from '@storybook/addon-contexts/react';
 import { contexts } from './contexts';
-// import { themes } from '@computapars/core';
-// import { withThemesProvider } from 'storybook-addon-styled-component-theme';
-
-// addDecorator(withThemesProvider([themes.bossy, themes.space, themes.discord]));
 
 addDecorator(withContexts(contexts));
 addDecorator(storyFn => {
@@ -18,16 +14,11 @@ addDecorator(storyFn => {
         @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&Montserrat+Subrayada:400,700|Montserrat:400,700,900');
     `;
 	return (
-		<div
-			style={{
-				paddingTop: '16px',
-				paddingLeft: '16px',
-			}}
-		>
+		<Fragment>
 			<GlobalStyle />
 			<Normalize />
 			{storyFn()}
-		</div>
+		</Fragment>
 	);
 });
 

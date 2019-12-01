@@ -28,3 +28,5 @@ export const fixedGridContainer = () => (
 		<GridItem>Galaxies</GridItem>
 	</FixedGridContainer>
 );
+
+export const defaultView = () => <div>Kittens</div>;

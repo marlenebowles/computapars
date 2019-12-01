@@ -11,3 +11,8 @@ export const Divider = styled.div`
 	width: 100%;
 	border: none;
 `;
+
+export const DefaultLayout = styled.div`
+	width: 100%;
+	margin: 15px 15px;
+`;

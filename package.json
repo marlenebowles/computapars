@@ -35,5 +35,8 @@
 	},
 	"workspaces": [
 		"packages/*"
-	]
+	],
+	"dependencies": {
+		"@storybook/addon-contexts": "^5.2.7"
+	}
 }

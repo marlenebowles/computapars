@@ -1,9 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
 import { spacing } from '@computapars/core';
-import { SearchIcon } from './../icon';
-
-import Button from './../button';
 
 export default {
 	title: 'Components | Form',
@@ -13,15 +10,6 @@ export const inputs = () => (
 	<Fragment>
 		<FormGroup>
 			<Input fullwidth label="Input" id="input-ex" placeholder="Input" />
-		</FormGroup>
-		<FormGroup>
-			<Input
-				fullwidth
-				label="With Icon"
-				id="with-icon"
-				icon={<SearchIcon size={20} />}
-				placeholder="With Icon"
-			/>
 		</FormGroup>
 		<FormGroup>
 			<Input label="disabled" id="disabled" disabled />
@@ -48,11 +36,6 @@ export const forms = () => (
 		<FormGroupInline>
 			<FormGroup margin={[0, spacing.margin.md, 0, 0]}>
 				<Input id="name" label="Name" placeholder="Name" />
-			</FormGroup>
-			<FormGroup>
-				<Button primary type="submit">
-					Submit
-				</Button>
 			</FormGroup>
 		</FormGroupInline>
 	</Form>

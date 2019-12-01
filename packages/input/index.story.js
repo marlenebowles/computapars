@@ -6,7 +6,7 @@ import { SearchIcon } from './../icon';
 import Button from './../button';
 
 export default {
-	title: 'Form',
+	title: 'Components | Form',
 };
 
 export const inputs = () => (

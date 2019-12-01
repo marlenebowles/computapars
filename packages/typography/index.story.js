@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Text, IntroText, FineText, H1, H2, H3, H4, H5, H6 } from './index';
 
 export default {
-	title: 'Typography',
+	title: 'Components | Typography',
 };
 
 const Paragraphs = () => (

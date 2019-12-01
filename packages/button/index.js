@@ -23,10 +23,10 @@ const Button = styled(BaseButton)`
 		props.primary &&
 		css`
             cursor: pointer;
-            background: ${props.theme.buttons.colors.primary}
+            background: ${props.theme.colors.primary}
             color: white;
             :hover, :focus {
-                background: ${darken(0.15, props.theme.buttons.colors.primary)};
+                background: ${darken(0.15, props.theme.colors.primary)};
             }
     `};
 	${props =>
@@ -34,13 +34,10 @@ const Button = styled(BaseButton)`
 		props.secondary &&
 		css`
 			cursor: pointer;
-            background: ${props.theme.buttons.colors.secondary}
+            background: ${props.theme.buttons.secondary}
 			color: white;
 			:hover, :focus {
-                background: ${darken(
-					0.15,
-					props.theme.buttons.colors.secondary
-				)};
+                background: ${darken(0.15, props.theme.buttons.secondary)};
 			}
 		`};
 `;

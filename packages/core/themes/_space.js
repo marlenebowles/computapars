@@ -28,16 +28,14 @@ const colors = {
 	text: palette.grey1,
 	disabled: palette.grey5,
 	divider: palette.grey4,
+	primary: palette.orange1,
+	secondary: palette.blue1,
 };
 
 const buttons = {
 	font: fonts.primary,
 	weight: typography.weight.bold,
 	letterSpacing: typography.size.sm,
-	colors: {
-		primary: palette.orange1,
-		secondary: palette.blue1,
-	},
 };
 
 export const space = {

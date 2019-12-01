@@ -10,7 +10,6 @@ export const contexts = [
 		title: 'Themes', // an unique name of a contextual environment
 		components: [
 			// an array of components that is going to be injected to wrap stories
-			DefaultLayout,
 			ThemeProvider,
 		],
 		params: [

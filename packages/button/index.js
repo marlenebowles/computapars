@@ -1,15 +1,16 @@
 import styled, { css } from 'styled-components';
-import { animations } from '@computapars/core';
+import { animations, border } from '@computapars/core';
 import { darken } from 'polished';
 
 const BaseButton = styled.button`
 	background: transparent;
-	border-radius: 4px;
+	border-radius: ${border.radius.default};
 	border: none;
 	padding: 0.25em 1em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: ${props => (props.type == 'submit' ? '40px' : 'auto')};
 	transition: ${animations.background};
 	font-family: ${props => props.theme.buttons.font};
 	font-weight: ${props => props.theme.buttons.weight};

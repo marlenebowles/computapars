@@ -5,7 +5,7 @@ export const BaseText = styled.p`
 	font-family: ${props => props.theme.fonts.secondary};
     font-weight: ${typography.weight.regular};
     line-height: ${typography.lineHeight.md}
-    color: ${props => props.theme.colors.gray1};
+    color: ${props => props.theme.colors.text};
 `;
 
 export const Text = styled(BaseText)`
@@ -28,7 +28,7 @@ export const FineText = styled(BaseText)`
 
 const baseHeader = css`
 	font-family: ${props => props.theme.fonts.primary};
-	color: ${props => props.theme.colors.gray1};
+	color: ${props => props.theme.colors.text};
 `;
 
 export const H1 = styled.h1`

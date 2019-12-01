@@ -14,11 +14,16 @@ addDecorator(storyFn => {
         @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&Montserrat+Subrayada:400,700|Montserrat:400,700,900');
     `;
 	return (
-		<Fragment>
+		<div
+			style={{
+				paddingTop: '16px',
+				paddingLeft: '16px',
+			}}
+		>
 			<GlobalStyle />
 			<Normalize />
 			{storyFn()}
-		</Fragment>
+		</div>
 	);
 });
 

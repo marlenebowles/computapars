@@ -18,12 +18,15 @@ import {
 	FastForward,
 	FastRewind,
 	Loop,
+	Search,
 	Repeat,
 	AddCircle,
 	AddCircleOutline,
 	Create,
 	Clear,
 	FilterList,
+	RadioButtonChecked,
+	RadioButtonUnchecked,
 	Remove,
 	RemoveCircle,
 	RemoveCircleOutline,
@@ -47,7 +50,7 @@ const baseIcon = css`
 	${props => {
 		const color = props.color
 			? props.color
-			: props.theme.buttons.colors.primary;
+			: props.theme.buttons.colors.secondary;
 		return css`
 			color: ${color};
 			${props.hover &&
@@ -146,6 +149,16 @@ export const RemoveCircleIcon = styled(RemoveCircle)`
 `;
 
 export const RemoveCircleOutlineIcon = styled(RemoveCircleOutline)`
+	${baseIcon};
+`;
+
+export const RadioButtonCheckedIcon = styled(RadioButtonChecked)`
+	${baseIcon};
+`;
+export const RadioButtonUncheckedIcon = styled(RadioButtonUnchecked)`
+	${baseIcon};
+`;
+export const SearchIcon = styled(Search)`
 	${baseIcon};
 `;
 

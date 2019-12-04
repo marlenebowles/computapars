@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
 import { spacing } from '@computapars/core';
 
 export default {
-	title: 'Components | Form',
+	title: 'Components | Input',
 };
 
 export const inputs = () => (
@@ -35,11 +35,23 @@ export const forms = () => (
 		</FormGroup>
 		<FormGroupInline>
 			<FormGroup margin={[0, spacing.margin.md, 0, 0]}>
-				<Input id="name" label="Name" placeholder="Name" />
+				<Input
+					id="first-name"
+					label="First Name"
+					placeholder="First Name"
+				/>
+			</FormGroup>
+			<FormGroup>
+				<Input
+					id="last-name"
+					label="Last Name"
+					placeholder="Last Name"
+				/>
 			</FormGroup>
 		</FormGroupInline>
 	</Form>
 );
+
 
 export const checkBoxes = () => {
 	const [checkedItems, setCheckedItems] = useState({});

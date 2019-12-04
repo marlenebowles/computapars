@@ -1,0 +1,13 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   scope: '@computapars/input',
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '3.19.0',
+0 silly argv   '$0': 'lerna',
+0 silly argv   pkg: '@computapars/icon'
+0 silly argv }
+1 notice cli v3.19.0
+2 verbose rootPath /Users/marlenebowles/Projects/computapars
+3 info versioning independent
+4 error Error: 404 Not Found - GET https://registry.npmjs.org/@computapars%2ficon - Not found
+4 error     at /Users/marlenebowles/Projects/computapars/node_modules/@evocateur/npm-registry-fetch/check-response.js:104:15

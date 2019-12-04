@@ -51,3 +51,41 @@ export const forms = () => (
 		</FormGroupInline>
 	</Form>
 );
+
+
+export const checkBoxes = () => {
+	const [checkedItems, setCheckedItems] = useState({});
+	const checkBoxes = [
+		{
+			name: 'checkbox-1',
+			key: 'checkbox1',
+			label: 'checkbox 1',
+		},
+		{
+			name: 'checkbox-2',
+			key: 'checkbox2',
+			label: 'checkbox 2',
+		},
+	];
+	const handleChange = event => {
+		setCheckedItems({
+			...checkedItems,
+			[event.target.name]: event.target.checked,
+		});
+	};
+	return (
+		<Fragment>
+			{checkBoxes.map(item => (
+				<FormGroup key={item.key}>
+					<Checkbox
+						name={item.name}
+						key={item.key}
+						label={item.label}
+						checked={checkedItems[item.name]}
+						onChange={handleChange}
+					/>
+				</FormGroup>
+			))}
+		</Fragment>
+	);
+};

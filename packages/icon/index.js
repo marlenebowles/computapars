@@ -1,11 +1,5 @@
-import React, { Fragment } from 'react';
+import { Github, LinkedIn, CheckCircle } from './svgs';
 
-import styled, { css } from 'styled-components';
-import { darken } from 'polished';
-
-import {
-	GitHub,
-} from './github';
-
-
-export const GitHubIcon = GitHub;
+export const GithubIcon = Github;
+export const LinkedInIcon = LinkedIn;
+export const CheckCircleIcon = CheckCircle;

@@ -1,14 +1,24 @@
 import React, { Fragment } from 'react';
 import {
-	GitHubIcon,
+	GithubIcon,
+	LinkedInIcon,
+	CheckCircleIcon,
 } from './index';
 
 export default {
 	title: 'Components | Icon',
 };
 
-export const GitHubExample = () => (
+export const logos = () => (
 	<Fragment>
-		<GitHubIcon hover size={'24'} />
+		<GithubIcon hover size={'24'} />
+		<LinkedInIcon hover size={'24'} />
+	</Fragment>
+);
+
+
+export const material = () => (
+	<Fragment>
+		<CheckCircleIcon hover size={'24'} />
 	</Fragment>
 );

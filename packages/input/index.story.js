@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
 import { spacing } from '@computapars/core';
 

@@ -1,8 +1,2 @@
-export {
-    LinkedIn,
-    Github
-} from './_logos';
-
-export {
-    CheckCircle
-} from './_material';
+export { LinkedIn, Github } from './_logos';
+export { Check } from './_material';

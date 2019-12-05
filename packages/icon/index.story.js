@@ -1,9 +1,5 @@
 import React, { Fragment } from 'react';
-import {
-	GithubIcon,
-	LinkedInIcon,
-	CheckCircleIcon,
-} from './index';
+import { GithubIcon, LinkedInIcon, CheckIcon } from './index';
 
 export default {
 	title: 'Components | Icon',
@@ -16,9 +12,8 @@ export const logos = () => (
 	</Fragment>
 );
 
-
 export const material = () => (
 	<Fragment>
-		<CheckCircleIcon hover size={'24'} />
+		<CheckIcon hover size={'24'} />
 	</Fragment>
 );

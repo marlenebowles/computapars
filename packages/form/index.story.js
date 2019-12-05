@@ -3,7 +3,7 @@ import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
 import { spacing } from '@computapars/core';
 
 export default {
-	title: 'Components | Input',
+	title: 'Components | Form',
 };
 
 export const inputs = () => (
@@ -51,7 +51,6 @@ export const forms = () => (
 		</FormGroupInline>
 	</Form>
 );
-
 
 export const checkBoxes = () => {
 	const [checkedItems, setCheckedItems] = useState({});

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
-
+import { CheckIcon } from '@computapars/icon';
 import { border, spacing, typography, animations } from '@computapars/core';
 import { lighten, darken, hideVisually } from 'polished';
 
@@ -97,35 +97,48 @@ export const InputGroup = styled.div`
 	position: relative;
 `;
 
-
 const CheckboxContainer = styled.div`
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: ${spacing.margin.sm};
-	position: relative;
 `;
 
 const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
 	${hideVisually()}
 `;
+
 const StyledCheckbox = styled.div`
+    display: inline-block;
     width: 16px;
     height: 16px;
     border: 1px solid ${props => props.theme.colors.border};
     background: ${props => (props.checked ? props.theme.colors.focus : 'white')}
     border-radius: 3px;
     transition: all 150ms;
+    margin-right: ${spacing.margin.sm};
     ${HiddenCheckbox}:focus + & {
-        box-shadow: 0 0 0 1px ${props => props.theme.colors.border};
-    }
+        ${props => {
+			return css`
+				${!props.checked
+					? `box-shadow: 0 0 0 1px ${props.theme.colors.secondary}`
+					: ''};
+			`;
+		}}
 `;
-
+const CheckIconRef = styled(CheckIcon)`
+	visibility: ${props => (props.checked ? 'visible' : 'hidden')};
+`;
 
 export const Checkbox = ({ checked, ...props }) => (
 	<Label htmlFor={props.id}>
 		<CheckboxContainer>
 			<HiddenCheckbox checked={checked || false} {...props} />
-			<StyledCheckbox checked={checked || false}></StyledCheckbox>
+			<StyledCheckbox checked={checked || false}>
+				<CheckIconRef
+					fill={'white'}
+					checked={checked || false}
+					size={16}
+				/>
+			</StyledCheckbox>
 		</CheckboxContainer>
 		{props.label}
 	</Label>

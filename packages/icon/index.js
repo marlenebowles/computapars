@@ -11,6 +11,19 @@ import {
 	SoundCloud,
 	Instagram,
 	Check,
+	Alarm,
+	AccountCircle,
+	Assignment,
+	Delete,
+	Minimize,
+	OpenInNew,
+	Swap,
+	FilerList,
+	Clear,
+	Create,
+	Add,
+	UserAdd,
+	Settings,
 } from './svgs';
 
 export const GithubIcon = Github;
@@ -25,3 +38,16 @@ export const SpotifyIcon = Spotify;
 export const SoundCloudIcon = SoundCloud;
 export const InstagramIcon = Instagram;
 export const CheckIcon = Check;
+export const AlarmIcon = Alarm;
+export const AccountCircleIcon = AccountCircle;
+export const AssignmentIcon = Assignment;
+export const DeleteIcon = Delete;
+export const MinimizeIcon = Minimize;
+export const OpenInNewIcon = OpenInNew;
+export const SwapIcon = Swap;
+export const FilerListIcon = FilerList;
+export const ClearIcon = Clear;
+export const CreateIcon = Create;
+export const AddIcon = Add;
+export const UserAddIcon = UserAdd;
+export const SettingsIcon = Settings;

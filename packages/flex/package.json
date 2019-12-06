@@ -1,0 +1,11 @@
+{
+	"name": "@computapars/flex",
+	"version": "0.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"styled-flex-component": "^3.0.0"
+	}
+}

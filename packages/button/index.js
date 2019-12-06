@@ -20,7 +20,7 @@ const BaseButton = styled.button`
 const Button = styled(BaseButton)`
 	${props =>
 		props &&
-		props.primary &&
+		props.type == 'primary' &&
 		css`
             cursor: pointer;
             background: ${props.theme.colors.primary}
@@ -31,10 +31,10 @@ const Button = styled(BaseButton)`
     `};
 	${props =>
 		props &&
-		props.secondary &&
+		props.type == 'secondary' &&
 		css`
 			cursor: pointer;
-            background: ${props.theme.buttons.secondary}
+            background: ${props.theme.colors.secondary}
 			color: white;
 			:hover, :focus {
                 background: ${darken(0.15, props.theme.colors.secondary)};

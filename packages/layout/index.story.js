@@ -7,11 +7,21 @@ import {
 	AsideGrid,
 	FooterGrid,
 	MainGrid,
+	Container,
 } from './index';
 export default {
 	title: 'Components | Layout',
 };
 
+export const contained = () => (
+	<Container
+		style={{
+			backgroundColor: '#ff7800',
+		}}
+	>
+		<div>cats</div>
+	</Container>
+);
 export const divider = () => (
 	<Fragment>
 		<Divider />

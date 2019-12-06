@@ -8,6 +8,13 @@ const breakpoints = {
 	xl: 1200,
 };
 
+const maxWidths = {
+	sm: 540,
+	md: 720,
+	lg: 960,
+	xl: 1140,
+};
+
 export const media = {
 	lessThan: size => (...args) => {
 		return css`
@@ -32,4 +39,5 @@ export const media = {
 			}
 		`;
 	},
+	maxWidths,
 };

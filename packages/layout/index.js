@@ -12,6 +12,20 @@ export const Divider = styled.div`
 	border: none;
 `;
 
+export const Container = styled.div`
+	display: block;
+	max-width: ${media.maxWidths.sm}px;
+	padding: ${spacing.gutters.sm};
+	${media.greaterThan('md')`
+        max-width: ${media.maxWidths.md}px;
+        padding: ${spacing.gutters.md};
+    `}
+	${media.greaterThan('lg')`
+        max-width: ${media.maxWidths.lg}px;
+        padding: ${spacing.gutters.md};
+    `}
+`;
+
 export const HeaderGrid = styled.header`
 	grid-area: header;
 	background-color: #648ca6;

@@ -1,39 +1,58 @@
+import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
 import { animations } from '@computapars/core';
 import { darken } from 'polished';
 const BaseLink = styled.a`
-    display: inline-block;
-    transition: ${animations.all}
-	:active,
-	:focus,
-	:hover {
+	display: inline-block;
+	transition: ${animations.all};
+	text-decoration: none;
+	&:link,
+	&:visited,
+	&:active,
+	&:hover {
 		text-decoration: none;
 		outline: none;
 		cursor: pointer;
 	}
+	&:focus {
+		text-decoration: underline;
+		outline: none;
+	}
 `;
 
-export const Link = styled(BaseLink)`
+export const StyledLink = styled(BaseLink)`
 	${props =>
 		props &&
-		props.primary &&
+		props.type == 'primary' &&
 		css`
-			color: ${props.theme.colors.primary};
-			:hover,
-			:focus {
+			&:link,
+			&:visited,
+			&:active {
+				color: ${props.theme.colors.primary};
+			}
+			&:hover,
+			&:focus {
 				cursor: pointer;
 				color: ${darken(0.15, props.theme.colors.primary)};
 			}
 		`};
 	${props =>
 		props &&
-		props.secondary &&
+		props.type == 'secondary' &&
 		css`
-			color: ${props.theme.colors.secondary};
-			:hover,
-			:focus {
+			&:link,
+			&:visited,
+			&:active {
+				color: ${props.theme.colors.secondary};
+			}
+			&:hover,
+			&:focus {
 				cursor: pointer;
 				color: ${darken(0.15, props.theme.colors.secondary)};
 			}
 		`};
 `;
+
+export const Link = ({ ...props }) => (
+	<StyledLink {...props}>{props.label}</StyledLink>
+);

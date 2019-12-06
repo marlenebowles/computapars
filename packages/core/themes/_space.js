@@ -35,7 +35,7 @@ const colors = {
 const buttons = {
 	font: fonts.primary,
 	weight: typography.weight.bold,
-	letterSpacing: typography.size.sm,
+	letterSpacing: typography.letterSpacing.md,
 };
 
 export const space = {

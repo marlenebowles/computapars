@@ -7,8 +7,10 @@ export default {
 	decorators: [
 		storyFn => <div style={{ backgroundColor: 'yellow' }}>{storyFn()}</div>,
 	],
-	addParameters: {
-		panelPosition: 'top',
+	parameters: {
+		knobs: { disabled: true },
+		actions: { disabled: true },
+		options: { showPanel: false },
 	},
 };
 

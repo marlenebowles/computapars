@@ -20,4 +20,10 @@ export const typography = {
 		sm: '1.25',
 		md: '1.5',
 	},
+	letterSpacing: {
+		normal: 'normal',
+		sm: '-1px',
+		md: '1px',
+		lg: '2px',
+	},
 };

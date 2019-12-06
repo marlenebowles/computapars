@@ -8,10 +8,14 @@ import { contexts } from './contexts';
 
 addDecorator(withContexts(contexts));
 addDecorator(storyFn => {
+	const theme = storyFn().props.theme;
 	const GlobalStyle = createGlobalStyle`
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800|Source+Sans+Pro:400,700,900');
         @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato:400,400i,700,900');
         @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&Montserrat+Subrayada:400,700|Montserrat:400,700,900');
+        body {
+            font-family: ${theme.fonts.secondary};
+        }
     `;
 	return (
 		<Fragment>

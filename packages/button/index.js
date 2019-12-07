@@ -7,6 +7,13 @@ const BaseButton = styled.button`
 	border-radius: ${border.radius.default};
 	border: none;
 	padding: 0.25em 1em;
+	${props => {
+		return css`
+			padding: ${props.size == 'sm' && '0.25em 1em'}
+				${props.size == 'md' && '0.50em 1.15em'}
+				${props.size == 'lg' && '0.75em 1.25em'};
+		`;
+	}}
 	display: flex;
 	align-items: center;
 	justify-content: center;

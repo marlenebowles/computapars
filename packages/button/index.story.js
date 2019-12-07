@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './index';
+import { H5 } from '@computapars/typography';
 import { spacing } from '@computapars/core';
 import { FlexBox, FlexBoxItem } from '@computapars/flex';
 import { action } from '@storybook/addon-actions';
@@ -22,17 +23,83 @@ export default {
 
 export const basic = () => {
 	return (
-		<FlexBox>
-			<FlexBoxItem margin={['0', spacing.margin.md, '0', '0']}>
-				<Button type={'primary'} onClick={action('CLICKED')}>
-					Primary Button
-				</Button>
-			</FlexBoxItem>
-			<FlexBoxItem>
-				<Button type={'secondary'} onClick={action('CLICKED')}>
-					secondary Button
-				</Button>
-			</FlexBoxItem>
+		<FlexBox column>
+			<H5 margin={[spacing.margin.sm, '0']} as="h2">
+				Primary
+			</H5>
+			<FlexBox alignBaseline full margin={[spacing.margin.sm, '0']}>
+				<FlexBoxItem
+					grow={1}
+					margin={['0', spacing.margin.md, '0', '0']}
+				>
+					<Button
+						size="sm"
+						type={'primary'}
+						onClick={action('CLICKED')}
+					>
+						Sm Button
+					</Button>
+				</FlexBoxItem>
+				<FlexBoxItem
+					grow={1}
+					margin={['0', spacing.margin.md, '0', '0']}
+				>
+					<Button
+						size="md"
+						type={'primary'}
+						onClick={action('CLICKED')}
+					>
+						Md Button
+					</Button>
+				</FlexBoxItem>
+				<FlexBoxItem grow={1}>
+					<Button
+						size="lg"
+						type={'primary'}
+						onClick={action('CLICKED')}
+					>
+						Lg Button
+					</Button>
+				</FlexBoxItem>
+			</FlexBox>
+			<H5 margin={[spacing.margin.sm, '0']} as="h2">
+				secondary
+			</H5>
+			<FlexBox alignBaseline full>
+				<FlexBoxItem
+					margin={['0', spacing.margin.md, '0', '0']}
+					grow={1}
+				>
+					<Button
+						size="sm"
+						type={'secondary'}
+						onClick={action('CLICKED')}
+					>
+						sm Button
+					</Button>
+				</FlexBoxItem>
+				<FlexBoxItem
+					margin={['0', spacing.margin.md, '0', '0']}
+					grow={1}
+				>
+					<Button
+						size="md"
+						type={'secondary'}
+						onClick={action('CLICKED')}
+					>
+						md Button
+					</Button>
+				</FlexBoxItem>
+				<FlexBoxItem grow={1}>
+					<Button
+						size="lg"
+						type={'secondary'}
+						onClick={action('CLICKED')}
+					>
+						lg Button
+					</Button>
+				</FlexBoxItem>
+			</FlexBox>
 		</FlexBox>
 	);
 };

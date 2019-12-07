@@ -18,7 +18,7 @@ export default makeDecorator({
 		return (
 			<FullMainLayout>
 				<MainGrid>
-					<FlexBox column full center>
+					<FlexBox column full alignCenter>
 						<Container backgroundColor="white">
 							<FlexBoxItem>
 								<H1 margin={['0', '0']}>{options.header}</H1>

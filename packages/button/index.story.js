@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from './index';
+import { spacing } from '@computapars/core';
+import { FlexBox, FlexBoxItem } from '@computapars/flex';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select } from '@storybook/addon-knobs';
 import withStoryContainer from '../../.storybook/withStoryContainer';
 
 export default {
@@ -13,26 +14,25 @@ export default {
 			introText: `Buttons are used for interface actions.
                 Primary style should be used sparingly per view for main call-to-action.`,
 		}),
-		withKnobs,
 	],
 	parameters: {
 		storyContainer: { disabled: false },
 	},
 };
 
-export const buttons = () => {
-	const label = 'Button Types';
-	const options = {
-		primary: 'primary',
-		secondary: 'secondary',
-	};
-	const defaultValue = 'primary';
+export const basic = () => {
 	return (
-		<Button
-			type={select(label, options, defaultValue)}
-			onClick={action('CLICKED')}
-		>
-			Default Button
-		</Button>
+		<FlexBox>
+			<FlexBoxItem margin={['0', spacing.margin.md, '0', '0']}>
+				<Button type={'primary'} onClick={action('CLICKED')}>
+					Primary Button
+				</Button>
+			</FlexBoxItem>
+			<FlexBoxItem>
+				<Button type={'secondary'} onClick={action('CLICKED')}>
+					secondary Button
+				</Button>
+			</FlexBoxItem>
+		</FlexBox>
 	);
 };

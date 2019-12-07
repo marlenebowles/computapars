@@ -11,14 +11,23 @@ import { spacing } from '@computapars/core';
 import Button from '@computapars/button';
 import { action } from '@storybook/addon-actions';
 
-import { withKnobs, select } from '@storybook/addon-knobs';
 import withStoryContainer from '../../.storybook/withStoryContainer';
 export default {
 	title: 'Components | Form',
+	parameters: {
+		storyContainer: { disabled: true },
+		knobs: { disabled: true },
+	},
 };
-
+const submitAction = action('SUBMITTED');
+const checkedAction = action('CHECKED');
 export const inputs = () => (
-	<Form onSubmit={action('SUBMITTED')}>
+	<Form
+		onSubmit={e => {
+			e.preventDefault();
+			submitAction(e);
+		}}
+	>
 		<FormGroup>
 			<FormGroupItem>
 				<Input
@@ -26,6 +35,7 @@ export const inputs = () => (
 					label="Input"
 					id="input-ex"
 					placeholder="Input"
+					onChange={action('ONCHANGE')}
 				/>
 			</FormGroupItem>
 		</FormGroup>
@@ -38,6 +48,7 @@ export const inputs = () => (
 					label="Error"
 					id="error"
 					error={['Email is incorrect']}
+					onChange={action('ONCHANGE')}
 				/>
 			</FormGroupItem>
 		</FormGroupInline>
@@ -57,11 +68,7 @@ inputs.story = {
 			introText: `Inputs are used to allow users to provide text input when the expected input is short. Input component has a
             range of options and supports several text formats including numbers.`,
 		}),
-		withKnobs,
 	],
-	parameters: {
-		storyContainer: { disabled: true },
-	},
 };
 
 export const checkBoxes = () => {
@@ -93,7 +100,10 @@ export const checkBoxes = () => {
 						key={item.key}
 						label={item.label}
 						checked={checkedItems[item.name]}
-						onChange={handleChange}
+						onChange={event => {
+							checkedAction(event);
+							handleChange(event);
+						}}
 					/>
 				</FormGroup>
 			))}
@@ -108,9 +118,5 @@ checkBoxes.story = {
 			introText: `Checkboxes are used to let a user choose one or more options
             from a limited number of options.`,
 		}),
-		withKnobs,
 	],
-	parameters: {
-		storyContainer: { disabled: true },
-	},
 };

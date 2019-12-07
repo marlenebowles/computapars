@@ -22,6 +22,18 @@ export const contained = () => (
 		<div>cats</div>
 	</Container>
 );
+
+export const containedNarrow = () => (
+	<Container
+		style={{
+			backgroundColor: '#ff7800',
+		}}
+		narrow
+	>
+		<div>cats</div>
+	</Container>
+);
+
 export const divider = () => (
 	<Fragment>
 		<Divider />

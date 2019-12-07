@@ -24,6 +24,16 @@ export const Container = styled.div`
         max-width: ${media.maxWidths.lg}px;
         padding: ${spacing.gutters.md};
     `}
+    ${props =>
+		props.narrow &&
+		css`
+			max-width: ${media.maxWidths.sm}px;
+			padding: ${spacing.gutters.sm};
+			${media.greaterThan('md')`
+                max-width: ${media.maxWidths.md}px;
+                padding: ${spacing.gutters.md};
+            `}
+		`}
 `;
 
 export const HeaderGrid = styled.header`

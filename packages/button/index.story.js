@@ -2,14 +2,6 @@ import React from 'react';
 import Button from './index';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
-import { H1, IntroText } from '@computapars/typography';
-import {
-	Container,
-	FullMainLayout,
-	MainGrid,
-	Divider,
-} from '@computapars/layout';
-import { FlexBox, FlexBoxItem } from '@computapars/flex';
 import withStoryContainer from '../../.storybook/withStoryContainer';
 
 export default {
@@ -18,8 +10,8 @@ export default {
 	decorators: [
 		withStoryContainer({
 			header: 'Button',
-			introText:
-				'Buttons are used for interface actions. Primary style should be used sparingly per view for main call-to-action.',
+			introText: `Buttons are used for interface actions.
+                Primary style should be used sparingly per view for main call-to-action.`,
 		}),
 		withKnobs,
 	],
@@ -38,7 +30,7 @@ export const buttons = () => {
 	return (
 		<Button
 			type={select(label, options, defaultValue)}
-			onClick={action('clicked')}
+			onClick={action('CLICKED')}
 		>
 			Default Button
 		</Button>

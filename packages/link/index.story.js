@@ -19,7 +19,7 @@ export const link = () => {
 	return (
 		<Fragment>
 			<Link
-				onClick={action('clicked')}
+				onClick={action('CLICKED')}
 				type={select(label, options, defaultValue)}
 				label={'Lorem Ipsum'}
 				href="/"

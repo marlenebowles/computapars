@@ -16,6 +16,9 @@ addDecorator(storyFn => {
         body {
             font-family: ${theme.fonts.secondary};
         }
+        * {
+            box-sizing: border-box;
+        }
     `;
 	return (
 		<Fragment>

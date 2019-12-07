@@ -6,6 +6,7 @@ export const spacing = {
 		xl: '2rem',
 	},
 	margin: {
+		xs: '0.425rem',
 		sm: '0.625rem',
 		md: '1.25rem',
 		lg: '1.875rem',

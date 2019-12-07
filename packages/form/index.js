@@ -4,11 +4,29 @@ import { CheckIcon } from '@computapars/icon';
 import { border, spacing, typography, animations } from '@computapars/core';
 import { lighten, darken, hideVisually } from 'polished';
 
+const baseMargin = css`
+	${props =>
+		props.margin &&
+		props.margin.length === 4 &&
+		css`
+			margin-top: ${props.margin[0]};
+			margin-right: ${props.margin[1]};
+			margin-bottom: ${props.margin[2]};
+			margin-left: ${props.margin[3]};
+		`}
+	${props =>
+		props.margin &&
+		props.margin.length === 2 &&
+		css`
+			margin: ${props.margin[0]} ${props.margin[1]};
+		`}
+`;
+
 const InputField = styled.input`
 	font-family: ${props => props.theme.fonts.secondary};
 	color: ${props => props.theme.colors.input};
 	height: 40px;
-	width: ${props => (props.fullwidth ? '100%' : 'auto')};
+	width: ${props => (props.fullwidth ? '100%' : 'inherit')};
 	border: 1px solid ${props => props.theme.colors.border};
 	${props =>
 		props.error &&
@@ -41,6 +59,7 @@ export const ErrorText = styled.div`
 	color: ${props => props.theme.colors.error};
 	font-size: ${typography.size.xs};
 	font-family: ${props => props.theme.fonts.secondary};
+	margin-top: ${spacing.margin.xs};
 `;
 
 export const InputWrapper = styled.div`
@@ -61,24 +80,33 @@ export const Form = styled.form`
 export const FormGroup = styled.div`
 	display: flex;
 	flex-direction: column;
-    flex-wrap: wrap;
-    ${props =>
+	flex-wrap: wrap;
+	margin-bottom: ${spacing.margin.md};
+
+	${props =>
 		props.margin &&
 		css`
-			margin-top: ${props => (props.margin[0] ? props.margin[0] : '0')};
-			margin-right: ${props => (props.margin[1] ? props.margin[1] : '0')};
-			margin-left: ${props => (props.margin[3] ? props.margin[3] : '0')};
+			${baseMargin}
 		`}
-	margin-bottom: ${props =>
-		props.margin && props.margin[1] ? props.margin[1] : spacing.margin.md};
 	position: relative;
+`;
+
+export const FormGroupItem = styled.div`
+	${baseMargin};
+	flex: 1;
 `;
 
 export const FormGroupInline = styled.div`
 	display: flex;
 	flex-direction: row;
-	align-items: flex-end;
+	align-items: baseline;
 	flex-wrap: wrap;
+	margin-bottom: ${spacing.margin.md};
+	${props =>
+		props.margin &&
+		css`
+			${baseMargin}
+		`}
 `;
 
 export const Label = styled.label`
@@ -95,6 +123,7 @@ export const InputGroup = styled.div`
 	flex-direction: column;
 	flex-wrap: wrap;
 	position: relative;
+	${baseMargin};
 `;
 
 const CheckboxContainer = styled.div`
@@ -146,7 +175,7 @@ export const Checkbox = ({ checked, ...props }) => (
 
 export const Input = props => {
 	return (
-		<InputGroup {...props}>
+		<InputGroup>
 			<Label htmlFor={props.id}>{props.label}</Label>
 			<InputWrapper>
 				{props.icon && <IconWrapper>{props.icon}</IconWrapper>}

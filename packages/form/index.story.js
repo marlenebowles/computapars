@@ -1,56 +1,68 @@
-import React, { Component, Fragment, useState } from 'react';
-import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
+import React, { Fragment, useState } from 'react';
+import {
+	Input,
+	Form,
+	FormGroup,
+	FormGroupInline,
+	FormGroupItem,
+	Checkbox,
+} from './index';
 import { spacing } from '@computapars/core';
+import Button from '@computapars/button';
+import { action } from '@storybook/addon-actions';
 
+import { withKnobs, select } from '@storybook/addon-knobs';
+import withStoryContainer from '../../.storybook/withStoryContainer';
 export default {
 	title: 'Components | Form',
 };
 
 export const inputs = () => (
-	<Fragment>
+	<Form onSubmit={action('SUBMITTED')}>
 		<FormGroup>
-			<Input fullwidth label="Input" id="input-ex" placeholder="Input" />
-		</FormGroup>
-		<FormGroup>
-			<Input label="disabled" id="disabled" disabled />
-		</FormGroup>
-		<FormGroup>
-			<Input label="Error" id="error" error={['Email is incorrect']} />
-		</FormGroup>
-	</Fragment>
-);
-
-export const forms = () => (
-	<Form>
-		<FormGroup>
-			<Input label="Email" fullwidth id="email" placeholder="Email" />
-		</FormGroup>
-		<FormGroup>
-			<Input
-				label="Password"
-				fullwidth
-				id="password"
-				placeholder="Password"
-			/>
-		</FormGroup>
-		<FormGroupInline>
-			<FormGroup margin={[0, spacing.margin.md, 0, 0]}>
+			<FormGroupItem>
 				<Input
-					id="first-name"
-					label="First Name"
-					placeholder="First Name"
+					fullwidth
+					label="Input"
+					id="input-ex"
+					placeholder="Input"
 				/>
-			</FormGroup>
-			<FormGroup>
+			</FormGroupItem>
+		</FormGroup>
+		<FormGroupInline margin={['0', '0', spacing.margin.sm, '0']}>
+			<FormGroupItem margin={['0', spacing.margin.sm, '0', '0']}>
+				<Input label="disabled" id="disabled" disabled />
+			</FormGroupItem>
+			<FormGroupItem>
 				<Input
-					id="last-name"
-					label="Last Name"
-					placeholder="Last Name"
+					label="Error"
+					id="error"
+					error={['Email is incorrect']}
 				/>
-			</FormGroup>
+			</FormGroupItem>
 		</FormGroupInline>
+		<FormGroup>
+			<FormGroupItem>
+				<Button type="submit" type="primary">
+					Submit
+				</Button>
+			</FormGroupItem>
+		</FormGroup>
 	</Form>
 );
+inputs.story = {
+	decorators: [
+		withStoryContainer({
+			header: 'Inputs',
+			introText: `Inputs are used to allow users to provide text input when the expected input is short. Input component has a
+            range of options and supports several text formats including numbers.`,
+		}),
+		withKnobs,
+	],
+	parameters: {
+		storyContainer: { disabled: true },
+	},
+};
 
 export const checkBoxes = () => {
 	const [checkedItems, setCheckedItems] = useState({});
@@ -87,4 +99,18 @@ export const checkBoxes = () => {
 			))}
 		</Fragment>
 	);
+};
+
+checkBoxes.story = {
+	decorators: [
+		withStoryContainer({
+			header: 'Checkbox',
+			introText: `Checkboxes are used to let a user choose one or more options
+            from a limited number of options.`,
+		}),
+		withKnobs,
+	],
+	parameters: {
+		storyContainer: { disabled: true },
+	},
 };

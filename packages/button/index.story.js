@@ -10,35 +10,22 @@ import {
 	Divider,
 } from '@computapars/layout';
 import { FlexBox, FlexBoxItem } from '@computapars/flex';
+import withStoryContainer from '../../.storybook/withStoryContainer';
 
 export default {
 	component: Button,
 	title: 'Components | Button',
 	decorators: [
-		storyFn => (
-			<FullMainLayout>
-				<MainGrid>
-					<FlexBox column full center>
-						<Container backgroundColor="white">
-							<FlexBoxItem>
-								<H1 margin={['0', '0']}>Button</H1>
-							</FlexBoxItem>
-							<FlexBoxItem>
-								<Divider></Divider>
-							</FlexBoxItem>
-							<IntroText>
-								Buttons are used for interface actions. Primary
-								style should be used sparingly per view for main
-								call-to-action.
-							</IntroText>
-							{storyFn()}
-						</Container>
-					</FlexBox>
-				</MainGrid>
-			</FullMainLayout>
-		),
+		withStoryContainer({
+			header: 'Button',
+			introText:
+				'Buttons are used for interface actions. Primary style should be used sparingly per view for main call-to-action.',
+		}),
 		withKnobs,
 	],
+	parameters: {
+		storyContainer: { disabled: false },
+	},
 };
 
 export const buttons = () => {

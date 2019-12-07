@@ -29,6 +29,21 @@ export const FineText = styled(BaseText)`
 const baseHeader = css`
 	font-family: ${props => props.theme.fonts.primary};
 	color: ${props => props.theme.colors.text};
+	${props =>
+		props.margin &&
+		props.margin.length === 4 &&
+		css`
+			margin-top: ${props.margin[0]};
+			margin-right: ${props.margin[1]};
+			margin-bottom: ${props.margin[2]};
+			margin-left: ${props.margin[3]};
+		`}
+	${props =>
+		props.margin &&
+		props.margin.length === 2 &&
+		css`
+			margin: ${props.margin[0]} ${props.margin[1]};
+		`}
 `;
 
 export const H1 = styled.h1`

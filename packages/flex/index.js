@@ -19,9 +19,4 @@ export const FlexBox = styled(Flex)`
 		`}
 `;
 
-export const Container = styled.div`
-	max-width: 960px;
-	margin: 0 auto;
-`;
-
 export const FlexBoxItem = FlexItem;

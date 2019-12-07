@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import {
 	Divider,
-	HolyGrailGrid,
-	HeroGrid,
+	HolyGrailLayout,
+	HeroLayout,
 	HeaderGrid,
 	AsideGrid,
 	FooterGrid,
@@ -40,22 +40,22 @@ export const divider = () => (
 	</Fragment>
 );
 
-export const HolyGrailLayout = () => (
-	<HolyGrailGrid>
+export const holyGrail = () => (
+	<HolyGrailLayout>
 		<HeaderGrid></HeaderGrid>
 		<MainGrid>
 			<AsideGrid></AsideGrid>
 		</MainGrid>
 		<FooterGrid></FooterGrid>
-	</HolyGrailGrid>
+	</HolyGrailLayout>
 );
 
-export const HeroLayout = () => (
-	<HeroGrid>
+export const hero = () => (
+	<HeroLayout>
 		<HeaderGrid></HeaderGrid>
 		<MainGrid>
 			<Divider />
 		</MainGrid>
 		<FooterGrid></FooterGrid>
-	</HeroGrid>
+	</HeroLayout>
 );

@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 import { media, spacing } from '@computapars/core';
 
+export const baseLayout = css`
+	background-color: ${props =>
+		props.backgroundColor ? props.backgroundColor : 'inherit'};
+`;
+
 export const Divider = styled.div`
 	user-select: none;
 	height: 1px;
@@ -15,47 +20,46 @@ export const Divider = styled.div`
 export const Container = styled.div`
 	display: block;
 	max-width: ${media.maxWidths.sm}px;
-	padding: ${spacing.gutters.sm};
+	padding: ${spacing.gutters.md};
+    ${baseLayout};
 	${media.greaterThan('md')`
         max-width: ${media.maxWidths.md}px;
-        padding: ${spacing.gutters.md};
-    `}
-	${media.greaterThan('lg')`
+        padding: ${spacing.gutters.lg};
+    `} ${media.greaterThan('lg')`
         max-width: ${media.maxWidths.lg}px;
-        padding: ${spacing.gutters.md};
-    `}
-    ${props =>
-		props.narrow &&
-		css`
-			max-width: ${media.maxWidths.sm}px;
-			padding: ${spacing.gutters.sm};
-			${media.greaterThan('md')`
+        padding: ${spacing.gutters.lg};
+    `} ${props =>
+	props.narrow &&
+	css`
+		max-width: ${media.maxWidths.sm}px;
+		padding: ${spacing.gutters.sm};
+		${media.greaterThan('md')`
                 max-width: ${media.maxWidths.md}px;
                 padding: ${spacing.gutters.md};
             `}
-		`}
+	`};
 `;
 
 export const HeaderGrid = styled.header`
 	grid-area: header;
-	background-color: #648ca6;
+	${baseLayout};
 `;
 
 export const AsideGrid = styled.aside`
 	grid-area: sidenav;
-	background-color: #394263;
+	${baseLayout};
 `;
 export const MainGrid = styled.main`
 	grid-area: main;
-	background-color: #8fd4d9;
+	${baseLayout};
 `;
 
 export const FooterGrid = styled.footer`
 	grid-area: footer;
-	background-color: #648ca6;
+	${baseLayout};
 `;
 
-export const HolyGrailGrid = styled.div`
+export const HolyGrailLayout = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 50px 1fr 50px;
@@ -77,7 +81,7 @@ export const HolyGrailGrid = styled.div`
 	}
 `;
 
-export const HeroGrid = styled.div`
+export const HeroLayout = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 50px 1fr 50px;
@@ -86,4 +90,11 @@ export const HeroGrid = styled.div`
 		'main'
 		'footer';
 	height: 100vh;
+`;
+
+export const FullMainLayout = styled.div`
+	display: grid;
+	grid-template-columns: 1fr;
+	height: 100vh;
+	grid-template-areas: 'main';
 `;

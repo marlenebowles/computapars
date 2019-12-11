@@ -1,29 +1,49 @@
 import React, { Fragment } from 'react';
-import { withKnobs, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Link } from './index';
-
+import withStoryContainer from '../../.storybook/withStoryContainer';
+import { FlexBox, FlexBoxItem } from '@computapars/flex';
 export default {
 	title: 'Components | Link',
 	component: Link,
-	decorators: [withKnobs],
+	decorators: [
+		withStoryContainer({
+			header: 'Link',
+			introText: `Links are used in content paragraphs to create pathways 
+            from one page to another.`,
+		}),
+	],
+	parameters: {
+		storyContainer: { disabled: false },
+	},
 };
+const clickAction = action('CLICKED');
 
 export const link = () => {
-	const label = 'Link Types';
-	const options = {
-		primary: 'primary',
-		secondary: 'secondary',
-	};
-	const defaultValue = 'primary';
 	return (
-		<Fragment>
-			<Link
-				onClick={action('CLICKED')}
-				type={select(label, options, defaultValue)}
-				label={'Lorem Ipsum'}
-				href="/"
-			/>
-		</Fragment>
+		<FlexBox responsive alignBaseline justifyAround full>
+			<FlexBoxItem>
+				<Link
+					onClick={e => {
+						e.preventDefault();
+						clickAction(e);
+					}}
+					type={'primary'}
+					label={'Primary Link'}
+					href="/"
+				/>
+			</FlexBoxItem>
+			<FlexBoxItem>
+				<Link
+					onClick={e => {
+						e.preventDefault();
+						clickAction(e);
+					}}
+					type={'secondary'}
+					label={'Secondary Link'}
+					href="/"
+				/>
+			</FlexBoxItem>
+		</FlexBox>
 	);
 };

@@ -1,4 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import withStoryContainer from '../../.storybook/withStoryContainer';
+import { H5 } from '@computapars/typography';
+import { spacing } from '@computapars/core';
+import { FlexBox, FlexBoxItem } from '@computapars/flex';
+
 import {
 	GithubIcon,
 	LinkedInIcon,
@@ -29,39 +34,73 @@ import {
 
 export default {
 	title: 'Components | Icon',
+	decorators: [
+		withStoryContainer({
+			header: 'Icon',
+			introText: `Icons are used to provide additional meaning or in places where 
+            text label doesn’t fit. Icon component allows you to customize the size and color of the icon. Icon also allows a hover prop, which will mimick the hover style of a link.`,
+		}),
+	],
+	parameters: {
+		storyContainer: { disabled: false },
+		knobs: { disabled: true },
+		actions: { disabled: true },
+		options: { showPanel: false },
+	},
 };
 
-export const logos = () => (
-	<Fragment>
-		<GithubIcon hover size={'24'} />
-		<LinkedInIcon hover size={'24'} />
-		<GitlabIcon hover size={'24'} />
-		<Html5Icon hover size={'24'} />
-		<JavascriptIcon hover size={'24'} />
-		<NodeJsIcon hover size={'24'} />
-		<ReactLogoIcon hover size={'24'} />
-		<ReduxIcon hover size={'24'} />
-		<SpotifyIcon hover size={'24'} />
-		<SoundCloudIcon hover size={'24'} />
-		<InstagramIcon hover size={'24'} />
-	</Fragment>
-);
-
-export const material = () => (
-	<Fragment>
-		<CheckIcon hover size={'24'} />
-		<AlarmIcon hover size={'24'} />
-		<AccountCircleIcon hover size={'24'} />
-		<AssignmentIcon hover size={'24'} />
-		<DeleteIcon hover size={'24'} />
-		<MinimizeIcon hover size={'24'} />
-		<OpenInNewIcon hover size={'24'} />
-		<SwapIcon size={'24'} />
-		<FilerListIcon hover size={'24'} />
-		<ClearIcon hover size={'24'} />
-		<CreateIcon hover size={'24'} />
-		<AddIcon hover size={'24'} />
-		<UserAddIcon hover size={'24'} />
-		<SettingsIcon hover size={'24'} />
-	</Fragment>
+export const Icon = () => (
+	<FlexBox column>
+		<H5 margin={[spacing.margin.sm, '0']} as="h2">
+			Logos
+		</H5>
+		<FlexBox
+			responsive
+			alignBaseline
+			justifyBetween
+			full
+			margin={[spacing.margin.sm, '0']}
+		>
+			<FlexBoxItem>
+				<GithubIcon hover size={'40'} />
+			</FlexBoxItem>
+			<FlexBoxItem>
+				<LinkedInIcon hover size={'40'} />
+			</FlexBoxItem>
+			<GitlabIcon hover size={'40'} />
+			<Html5Icon hover size={'40'} />
+			<JavascriptIcon hover size={'40'} />
+			<NodeJsIcon hover size={'40'} />
+			<ReactLogoIcon hover size={'40'} />
+			<ReduxIcon hover size={'40'} />
+			<SpotifyIcon hover size={'40'} />
+			<SoundCloudIcon hover size={'40'} />
+			<InstagramIcon hover size={'40'} />
+		</FlexBox>
+		<H5 margin={[spacing.margin.sm, '0']} as="h2">
+			Material
+		</H5>
+		<FlexBox
+			responsive
+			alignBaseline
+			justifyBetween
+			full
+			margin={[spacing.margin.sm, '0']}
+		>
+			<CheckIcon hover size={'40'} />
+			<AlarmIcon hover size={'40'} />
+			<AccountCircleIcon hover size={'40'} />
+			<AssignmentIcon hover size={'40'} />
+			<DeleteIcon hover size={'40'} />
+			<MinimizeIcon hover size={'40'} />
+			<OpenInNewIcon hover size={'40'} />
+			<SwapIcon size={'40'} />
+			<FilerListIcon hover size={'40'} />
+			<ClearIcon hover size={'40'} />
+			<CreateIcon hover size={'40'} />
+			<AddIcon hover size={'40'} />
+			<UserAddIcon hover size={'40'} />
+			<SettingsIcon hover size={'40'} />
+		</FlexBox>
+	</FlexBox>
 );

@@ -36,6 +36,7 @@ addParameters({
 		sidebarAnimations: true,
 		isToolshown: true,
 		theme: baseTheme,
+		panelPosition: 'right',
 	},
 });
 

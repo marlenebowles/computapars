@@ -27,6 +27,9 @@ export default makeDecorator({
 								<Divider></Divider>
 							</FlexBoxItem>
 							<IntroText>{options.introText}</IntroText>
+							<FlexBoxItem>
+								<Divider></Divider>
+							</FlexBoxItem>
 							{storyFn(context)}
 						</Container>
 					</FlexBox>

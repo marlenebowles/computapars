@@ -27,10 +27,14 @@ export const basic = () => {
 			<H5 margin={[spacing.margin.sm, '0']} as="h2">
 				Primary
 			</H5>
-			<FlexBox alignBaseline full margin={[spacing.margin.sm, '0']}>
+			<FlexBox
+				responsive
+				alignBaseline
+				full
+				margin={[spacing.margin.sm, '0']}
+			>
 				<FlexBoxItem
-					grow={1}
-					margin={['0', spacing.margin.md, '0', '0']}
+					margin={['0', spacing.margin.md, spacing.margin.md, '0']}
 				>
 					<Button
 						size="sm"
@@ -41,8 +45,7 @@ export const basic = () => {
 					</Button>
 				</FlexBoxItem>
 				<FlexBoxItem
-					grow={1}
-					margin={['0', spacing.margin.md, '0', '0']}
+					margin={['0', spacing.margin.md, spacing.margin.md, '0']}
 				>
 					<Button
 						size="md"
@@ -52,7 +55,7 @@ export const basic = () => {
 						Md Button
 					</Button>
 				</FlexBoxItem>
-				<FlexBoxItem grow={1}>
+				<FlexBoxItem>
 					<Button
 						size="lg"
 						type={'primary'}
@@ -65,10 +68,9 @@ export const basic = () => {
 			<H5 margin={[spacing.margin.sm, '0']} as="h2">
 				secondary
 			</H5>
-			<FlexBox alignBaseline full>
+			<FlexBox responsive alignBaseline justifyEvenly full>
 				<FlexBoxItem
-					margin={['0', spacing.margin.md, '0', '0']}
-					grow={1}
+					margin={['0', spacing.margin.md, spacing.margin.md, '0']}
 				>
 					<Button
 						size="sm"
@@ -79,8 +81,7 @@ export const basic = () => {
 					</Button>
 				</FlexBoxItem>
 				<FlexBoxItem
-					margin={['0', spacing.margin.md, '0', '0']}
-					grow={1}
+					margin={['0', spacing.margin.md, spacing.margin.md, '0']}
 				>
 					<Button
 						size="md"
@@ -90,7 +91,7 @@ export const basic = () => {
 						md Button
 					</Button>
 				</FlexBoxItem>
-				<FlexBoxItem grow={1}>
+				<FlexBoxItem>
 					<Button
 						size="lg"
 						type={'secondary'}

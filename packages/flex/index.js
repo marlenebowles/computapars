@@ -20,6 +20,11 @@ const baseMargin = css`
 			margin: ${props.margin[0]} ${props.margin[1]};
 		`}
 `;
+
+export const FlexBoxItem = styled(FlexItem)`
+	${baseMargin};
+`;
+
 export const FlexBox = styled(Flex)`
 	${baseMargin};
 	${props =>
@@ -30,13 +35,15 @@ export const FlexBox = styled(Flex)`
 	${props =>
 		props.responsive &&
 		css`
+			${FlexBoxItem} {
+				flex-basis: inherit;
+			}
 			flex-wrap: wrap;
 			${media.greaterThan('sm')`
                 flex-wrap: nowrap;
+                ${FlexBoxItem} {
+                    flex-basis: auto;
+                }
             `}
 		`}
-`;
-
-export const FlexBoxItem = styled(FlexItem)`
-	${baseMargin};
 `;

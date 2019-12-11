@@ -33,10 +33,11 @@ addParameters({
 	options: {
 		showNav: true,
 		showPanel: true,
-		sidebarAnimations: true,
+		sidebarAnimations: false,
 		isToolshown: true,
 		theme: baseTheme,
-		panelPosition: 'right',
+		panelPosition: 'bottom',
+		isToolshown: true,
 	},
 });
 

@@ -21,7 +21,7 @@ const clickAction = action('CLICKED');
 
 export const link = () => {
 	return (
-		<FlexBox responsive alignBaseline justifyAround full>
+		<FlexBox responsive alignBaseline justifyAround>
 			<FlexBoxItem>
 				<Link
 					onClick={e => {

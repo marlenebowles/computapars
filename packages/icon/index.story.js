@@ -57,16 +57,11 @@ export const Icon = () => (
 		<FlexBox
 			responsive
 			alignBaseline
-			justifyBetween
 			full
 			margin={[spacing.margin.sm, '0']}
 		>
-			<FlexBoxItem>
-				<GithubIcon hover size={'40'} />
-			</FlexBoxItem>
-			<FlexBoxItem>
-				<LinkedInIcon hover size={'40'} />
-			</FlexBoxItem>
+			<GithubIcon hover size={'40'} />
+			<LinkedInIcon hover size={'40'} />
 			<GitlabIcon hover size={'40'} />
 			<Html5Icon hover size={'40'} />
 			<JavascriptIcon hover size={'40'} />
@@ -83,7 +78,6 @@ export const Icon = () => (
 		<FlexBox
 			responsive
 			alignBaseline
-			justifyBetween
 			full
 			margin={[spacing.margin.sm, '0']}
 		>

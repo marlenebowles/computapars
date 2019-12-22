@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
-import { FlexBox, FlexBoxItem, Container } from './index';
+import { FlexBox, FlexBoxItem } from './index';
 
 export default {
 	title: 'Components | Flex',
 };
 
 export const FlexBoxFull = () => (
-	<FlexBox full>
+	<FlexBox mt={3} color="secondary" bg="primary" full>
 		<FlexBoxItem>World</FlexBoxItem>
 		<FlexBoxItem>Hello</FlexBoxItem>
 	</FlexBox>

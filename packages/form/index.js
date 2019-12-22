@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import { CheckIcon } from '@computapars/icon';
-import { border, spacing, typography, animations } from '@computapars/core';
+import { border, typography, animations } from '@computapars/core';
 import { lighten, darken, hideVisually } from 'polished';
+import { space } from 'styled-system';
 
 const InputField = styled.input`
 	font-family: ${props => props.theme.fonts.secondary};
@@ -18,9 +19,8 @@ const InputField = styled.input`
 	background-color: white;
 	padding-top: 0;
 	padding-bottom: 0;
-	padding-left: ${spacing.padding.md};
-	padding-right: ${props =>
-		props.icon ? spacing.padding.xl : spacing.padding.md};
+	padding-left: ${space[2]};
+	padding-right: ${props => (props.icon ? space[-1] : space[2])};
 	outline: 0;
 	border-radius: ${border.radius.default};
 	&:focus {
@@ -70,7 +70,7 @@ export const FormGroup = styled.div`
 			margin-left: ${props => (props.margin[3] ? props.margin[3] : '0')};
 		`}
 	margin-bottom: ${props =>
-		props.margin && props.margin[1] ? props.margin[1] : spacing.margin.md};
+		props.margin && props.margin[1] ? props.margin[1] : space[2]};
 	position: relative;
 `;
 
@@ -86,7 +86,7 @@ export const Label = styled.label`
 	font-family: ${props => props.theme.fonts.primary};
 	font-size: ${typography.size.md};
 	font-weight: ${typography.weight.bold};
-	margin-bottom: ${spacing.margin.sm};
+	margin-bottom: ${space[1]};
 	text-transform: uppercase;
 	line-height: ${typography.lineHeight.sm};
 `;
@@ -114,7 +114,7 @@ const StyledCheckbox = styled.div`
     background: ${props => (props.checked ? props.theme.colors.focus : 'white')}
     border-radius: 3px;
     transition: all 150ms;
-    margin-right: ${spacing.margin.sm};
+    margin-right: ${space[1]};
     ${HiddenCheckbox}:focus + & {
         ${props => {
 			return css`

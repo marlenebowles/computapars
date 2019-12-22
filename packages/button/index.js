@@ -1,8 +1,12 @@
 import styled, { css } from 'styled-components';
 import { animations, border } from '@computapars/core';
 import { darken } from 'polished';
+import { space, layout, color } from 'styled-system';
 
 const BaseButton = styled.button`
+    ${space}
+    ${layout}
+    ${color}
 	background: transparent;
 	border-radius: ${border.radius.default};
 	border: none;

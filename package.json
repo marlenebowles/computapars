@@ -36,5 +36,7 @@
 	"workspaces": [
 		"packages/*"
 	],
-	"dependencies": {}
+	"dependencies": {
+		"styled-system": "^5.1.4"
+	}
 }

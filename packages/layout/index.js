@@ -1,11 +1,13 @@
-import styled, { css } from 'styled-components';
-import { media, spacing } from '@computapars/core';
+import styled from 'styled-components';
+import { media } from '@computapars/core';
+import { space, layout, color } from 'styled-system';
 
 export const Divider = styled.div`
+	${space}
 	user-select: none;
 	height: 1px;
-	margin-bottom: ${spacing.margin.md} !important;
-	margin-top: ${spacing.margin.md} !important;
+	margin-bottom: ${props => props.theme.space[2]} !important;
+	margin-top: ${props => props.theme.space[2]} !important;
 	background: ${props => props.theme.colors.divider};
 	display: block;
 	width: 100%;
@@ -13,16 +15,15 @@ export const Divider = styled.div`
 `;
 
 export const Container = styled.div`
+	${color}
+	${space}
 	display: block;
 	max-width: ${media.maxWidths.sm}px;
-	padding: ${spacing.gutters.sm};
 	${media.greaterThan('md')`
         max-width: ${media.maxWidths.md}px;
-        padding: ${spacing.gutters.md};
     `}
 	${media.greaterThan('lg')`
         max-width: ${media.maxWidths.lg}px;
-        padding: ${spacing.gutters.md};
     `}
 `;
 

@@ -1,18 +1,8 @@
-export const spacing = {
-	padding: {
-		sm: '0.625rem',
-		md: '1.25rem',
-		lg: '1.875rem',
-		xl: '2rem',
-	},
-	margin: {
-		sm: '0.625rem',
-		md: '1.25rem',
-		lg: '1.875rem',
-	},
-	gutters: {
-		sm: '0.625rem',
-		md: '1.25rem',
-		lg: '1.875rem',
-	},
-};
+export const spacing = [
+	'0rem',
+	'0.625rem',
+	'1.25rem',
+	'1.875rem',
+	'2rem',
+	'auto',
+];

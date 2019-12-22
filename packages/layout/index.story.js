@@ -14,11 +14,7 @@ export default {
 };
 
 export const contained = () => (
-	<Container
-		style={{
-			backgroundColor: '#ff7800',
-		}}
-	>
+	<Container bg="secondary" p={[1, 2, 3, 4]}>
 		<div>cats</div>
 	</Container>
 );

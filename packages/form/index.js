@@ -1,30 +1,32 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { CheckIcon } from '@computapars/icon';
-import { border, typography, animations } from '@computapars/core';
 import { lighten, darken, hideVisually } from 'polished';
-import { space } from 'styled-system';
+import { space, width } from 'styled-system';
 
 const InputField = styled.input`
-	font-family: ${props => props.theme.fonts.secondary};
-	color: ${props => props.theme.colors.input};
-	height: 40px;
-	width: ${props => (props.fullwidth ? '100%' : 'auto')};
-	border: 1px solid ${props => props.theme.colors.border};
+	${width}
+	${space}
+	${props => css`
+		font-family: ${props.theme.fonts.secondary};
+		color: ${props.theme.colors.input};
+		border: 1px solid ${props.theme.colors.border};
+		padding-left: ${props.theme.space.md};
+		border-radius: ${props.theme.radii.default};
+	`}
 	${props =>
 		props.error &&
 		css`
 			border: 1px solid ${props.theme.colors.error};
 		`};
-	background-color: white;
+	padding-right: ${props => (props.icon ? props.theme.space.md : props.theme.space.md)};
+	outline: 0;
 	padding-top: 0;
 	padding-bottom: 0;
-	padding-left: ${space[2]};
-	padding-right: ${props => (props.icon ? space[-1] : space[2])};
-	outline: 0;
-	border-radius: ${border.radius.default};
+	background-color: white;
+	transition: all .3s ease-in-out;
 	&:focus {
-		outline-offset: -${border.radius.default};
+		outline-offset: ${props => props.theme.radii.default};
 		border: 1px solid
 			${props =>
 				props.error
@@ -34,13 +36,14 @@ const InputField = styled.input`
 	&:disabled {
 		background-color: ${props => darken(0.02, props.theme.colors.disabled)};
 	}
-	transition: ${animations.all};
 `;
 
 export const ErrorText = styled.div`
-	color: ${props => props.theme.colors.error};
-	font-size: ${typography.size.xs};
-	font-family: ${props => props.theme.fonts.secondary};
+	${({theme}) => css`
+		color: ${theme.colors.error};
+		font-size: ${theme.fontSizes.xs};
+		font-family: ${theme.fonts.secondary};
+	`}	
 `;
 
 export const InputWrapper = styled.div`
@@ -59,18 +62,10 @@ export const Form = styled.form`
 `;
 
 export const FormGroup = styled.div`
+	${space}
 	display: flex;
 	flex-direction: column;
     flex-wrap: wrap;
-    ${props =>
-		props.margin &&
-		css`
-			margin-top: ${props => (props.margin[0] ? props.margin[0] : '0')};
-			margin-right: ${props => (props.margin[1] ? props.margin[1] : '0')};
-			margin-left: ${props => (props.margin[3] ? props.margin[3] : '0')};
-		`}
-	margin-bottom: ${props =>
-		props.margin && props.margin[1] ? props.margin[1] : space[2]};
 	position: relative;
 `;
 
@@ -82,13 +77,16 @@ export const FormGroupInline = styled.div`
 `;
 
 export const Label = styled.label`
-	color: ${props => props.theme.colors.text};
-	font-family: ${props => props.theme.fonts.primary};
-	font-size: ${typography.size.md};
-	font-weight: ${typography.weight.bold};
-	margin-bottom: ${space[1]};
+	${space}
+	${({theme}) => css`
+		line-height: ${theme.lineHeights.sm};
+		color: ${theme.colors.text};
+		font-family: ${theme.fonts.primary};
+		font-size: ${theme.fontSizes.md};
+		font-weight: ${theme.fontWeights.bold};
+	`}
+
 	text-transform: uppercase;
-	line-height: ${typography.lineHeight.sm};
 `;
 export const InputGroup = styled.div`
 	display: flex;

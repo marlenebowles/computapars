@@ -1,14 +1,15 @@
-import styled from 'styled-components';
-import { media } from '@computapars/core';
-import { space, layout, color } from 'styled-system';
+import styled, {css} from 'styled-components';
+import { space, color } from 'styled-system';
 
 export const Divider = styled.div`
 	${space}
+	${({theme}) => css`
+		margin-bottom: ${theme.space.md} !important;
+		margin-top: ${theme.space.md} !important;
+		background: ${theme.colors.divider};
+	`}
 	user-select: none;
 	height: 1px;
-	margin-bottom: ${props => props.theme.space[2]} !important;
-	margin-top: ${props => props.theme.space[2]} !important;
-	background: ${props => props.theme.colors.divider};
 	display: block;
 	width: 100%;
 	border: none;
@@ -17,14 +18,19 @@ export const Divider = styled.div`
 export const Container = styled.div`
 	${color}
 	${space}
+	${({theme}) => css`
+		${theme.mediaQueries.sm} {
+			max-width: ${theme.sizes.maxWidths.sm}px;
+		}
+		${theme.mediaQueries.md} {
+			max-width: ${theme.sizes.maxWidths.md}px;
+		}
+		${theme.mediaQueries.lg} {
+        	max-width: ${theme.sizes.maxWidths.lg}px;
+		}
+	`}	
 	display: block;
-	max-width: ${media.maxWidths.sm}px;
-	${media.greaterThan('md')`
-        max-width: ${media.maxWidths.md}px;
-    `}
-	${media.greaterThan('lg')`
-        max-width: ${media.maxWidths.lg}px;
-    `}
+	margin: 0 auto;
 `;
 
 export const HeaderGrid = styled.header`
@@ -60,11 +66,13 @@ export const HolyGrailGrid = styled.div`
 		grid-template-columns: 1fr;
 		grid-template-rows: 50px 1fr;
 		grid-template-areas: 'sidenav';
-		${media.greaterThan('sm')`
-            grid-template-columns: 240px 1fr;
-            grid-template-rows: 1fr;
-            grid-template-areas: 'sidenav main';
-        `}
+		${({theme}) => css`
+			${theme.mediaQueries.sm} {
+				grid-template-columns: 240px 1fr;
+            	grid-template-rows: 1fr;
+            	grid-template-areas: 'sidenav main';
+			}
+		`}	
 	}
 `;
 

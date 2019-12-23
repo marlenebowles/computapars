@@ -15,6 +15,7 @@ export const Paragraphs = () => (
 			clouds? Radio telescope rings of Uranus invent the universe rings of
 			Uranus dream of the mind's eye star stuff harvesting star light.
 		</IntroText>
+
 		<Text>
 			Star stuff harvesting star light vanquish the impossible not a
 			sunrise but a galaxyrise the only home we've ever known hearts of

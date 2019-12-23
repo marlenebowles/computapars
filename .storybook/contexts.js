@@ -15,7 +15,11 @@ export const contexts = [
 		params: [
 			// an array of params contains a set of predefined `props` for `components`
 			{ name: 'Space', props: { theme: themes.space } },
-			{ name: 'Bossy', props: { theme: themes.bossy }, default: true },
+			{
+				name: 'Gallery',
+				props: { theme: themes.gallery },
+				default: true,
+			},
 			{
 				name: 'Discord',
 				props: { theme: themes.discord },

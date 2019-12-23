@@ -17,9 +17,11 @@ export const buttons = () => {
 	};
 	const defaultValue = 'primary';
 	return (
+
 		<Button
-			type={select(label, options, defaultValue)}
+			variant={select(label, options, defaultValue)}
 			onClick={action('clicked')}
+			height={30}
 		>
 			Lorem Ipsum
 		</Button>

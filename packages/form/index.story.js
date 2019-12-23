@@ -1,6 +1,5 @@
 import React, { Component, Fragment, useState } from 'react';
 import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
-import { spacing } from '@computapars/core';
 
 export default {
 	title: 'Components | Form',
@@ -9,7 +8,7 @@ export default {
 export const inputs = () => (
 	<Fragment>
 		<FormGroup>
-			<Input fullwidth label="Input" id="input-ex" placeholder="Input" />
+			<Input label="Input" id="input-ex" placeholder="Input" />
 		</FormGroup>
 		<FormGroup>
 			<Input label="disabled" id="disabled" disabled />
@@ -23,18 +22,18 @@ export const inputs = () => (
 export const forms = () => (
 	<Form>
 		<FormGroup>
-			<Input label="Email" fullwidth id="email" placeholder="Email" />
+			<Input label="Email" id="email" placeholder="Email" />
 		</FormGroup>
 		<FormGroup>
 			<Input
 				label="Password"
-				fullwidth
+
 				id="password"
 				placeholder="Password"
 			/>
 		</FormGroup>
 		<FormGroupInline>
-			<FormGroup margin={[0, spacing.margin.md, 0, 0]}>
+			<FormGroup margin={[0, 'md', 0, 0]}>
 				<Input
 					id="first-name"
 					label="First Name"

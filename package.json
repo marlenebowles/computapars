@@ -51,5 +51,8 @@
 	"bugs": {
 		"url": "https://github.com/marlenebowles/computapars/issues"
 	},
-	"homepage": "https://github.com/marlenebowles/computapars#readme"
+	"homepage": "https://github.com/marlenebowles/computapars#readme",
+	"dependencies": {
+		"husky": "^3.1.0"
+	}
 }

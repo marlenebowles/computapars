@@ -25,7 +25,7 @@ import {
 	AddIcon,
 	UserAddIcon,
 	SettingsIcon,
-} from './index';
+} from './src/index';
 
 export default {
 	title: 'Components | Icon',
@@ -41,7 +41,7 @@ export const logos = () => (
 		<NodeJsIcon hover />
 		<ReactLogoIcon hover />
 		<ReduxIcon hover />
-		<SpotifyIcon hover  />
+		<SpotifyIcon hover />
 		<SoundCloudIcon hover />
 		<InstagramIcon hover />
 	</Fragment>

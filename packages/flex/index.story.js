@@ -1,15 +1,12 @@
 import React, { Fragment } from 'react';
-import { FlexBox } from './index';
+import { FlexBox } from './src/index';
 
 export default {
 	title: 'Components | Flex',
 };
 
 export const FlexBoxFull = () => (
-	<FlexBox 
-		mt="lg" 
-		color="secondary"
-		bg="primary">
+	<FlexBox mt="lg" color="secondary" bg="primary">
 		<div>Hello</div>
 		<div>World</div>
 	</FlexBox>

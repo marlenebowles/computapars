@@ -8,7 +8,7 @@ import {
 	FooterGrid,
 	MainGrid,
 	Container,
-} from './index';
+} from './src/index';
 export default {
 	title: 'Components | Layout',
 };
@@ -37,8 +37,7 @@ export const HolyGrailLayout = () => (
 export const HeroLayout = () => (
 	<HeroGrid>
 		<HeaderGrid></HeaderGrid>
-		<MainGrid>
-		</MainGrid>
+		<MainGrid></MainGrid>
 		<FooterGrid></FooterGrid>
 	</HeroGrid>
 );

@@ -1,5 +1,5 @@
-import React, { Component, Fragment, useState } from 'react';
-import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './index';
+import React, { Fragment, useState } from 'react';
+import { Input, Form, FormGroup, FormGroupInline, Checkbox } from './src/index';
 
 export default {
 	title: 'Components | Form',
@@ -25,12 +25,7 @@ export const forms = () => (
 			<Input label="Email" id="email" placeholder="Email" />
 		</FormGroup>
 		<FormGroup>
-			<Input
-				label="Password"
-
-				id="password"
-				placeholder="Password"
-			/>
+			<Input label="Password" id="password" placeholder="Password" />
 		</FormGroup>
 		<FormGroupInline>
 			<FormGroup margin={[0, 'md', 0, 0]}>

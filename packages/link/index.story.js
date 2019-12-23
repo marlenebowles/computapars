@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { Link } from './index';
+import { Link } from './src/index';
 
 export default {
 	title: 'Components | Link',

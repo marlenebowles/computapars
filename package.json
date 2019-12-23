@@ -1,42 +1,55 @@
 {
-	"name": "root",
-	"private": true,
-	"scripts": {
-		"storybook": "start-storybook -p 5555",
-		"build-storybook": "build-storybook -c .storybook -o .out",
-		"build": "build-storybook -c .storybook -o public"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.7.0",
-		"@babel/core": "^7.7.2",
-		"@babel/preset-env": "^7.7.1",
-		"@babel/preset-react": "^7.7.0",
-		"@storybook/addon-actions": "^5.2.6",
-		"@storybook/addon-contexts": "^5.2.7",
-		"@storybook/addon-knobs": "^5.2.6",
-		"@storybook/addon-storyshots": "^5.2.6",
-		"@storybook/addon-viewport": "^5.2.6",
-		"@storybook/addons": "^5.2.6",
-		"@storybook/react": "^5.2.5",
-		"babel-jest": "^24.9.0",
-		"babel-loader": "^8.0.6",
-		"babel-plugin-macros": "^2.7.0",
-		"jest": "^24.9.0",
-		"jest-styled-components": "^6.3.3",
-		"lerna": "^3.18.3",
-		"prop-types": "^15.7.2",
-		"react": "^16.11.0",
-		"react-dom": "^16.11.0",
-		"react-test-renderer": "^16.12.0",
-		"require-context.macro": "^1.2.2",
-		"styled-components": "^4.4.1",
-		"styled-normalize": "^8.0.6",
-		"webpack": "^4.41.2"
-	},
-	"workspaces": [
-		"packages/*"
-	],
-	"dependencies": {
-		"styled-system": "^5.1.4"
-	}
+  "name": "@computapars/root",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 5555",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "build": "build-storybook -c .storybook -o public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-contexts": "^5.2.7",
+    "@storybook/addon-knobs": "^5.2.6",
+    "@storybook/addon-storyshots": "^5.2.6",
+    "@storybook/addon-viewport": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.5",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.7.0",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.3",
+    "lerna": "^3.18.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-test-renderer": "^16.12.0",
+    "require-context.macro": "^1.2.2",
+    "styled-components": "^4.4.1",
+    "styled-normalize": "^8.0.6",
+    "webpack": "^4.41.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "styled-system": "^5.1.4"
+  },
+  "description": "Computapars is a react component design system using Lerna for package management, Jest for testing, Storybook for exploring. It's currently being deployed through Zeit Now but there are other options.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlenebowles/computapars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlenebowles/computapars/issues"
+  },
+  "homepage": "https://github.com/marlenebowles/computapars#readme"
 }

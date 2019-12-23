@@ -1,5 +1,5 @@
 {
-  "name": "@computapars/root",
+  "name": "@marlenebowles/root",
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 5555",

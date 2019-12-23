@@ -1,13 +1,14 @@
 import React from 'react';
-
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
+import { width, height, size } from 'styled-system';
 
 const BlockSvg = styled.svg`
+	${size}
+	${width}
+	${height}
 	display: block;
 	transform-origin: 50% 50%;
-	height: ${({ height }) => height}px;
-	width: ${({ width }) => width}px;
 	fill: ${({ theme, fill }) => (fill ? fill : theme.colors.secondary)};
 	&:hover,
 	&focus {
@@ -20,20 +21,22 @@ const BlockSvg = styled.svg`
 	}
 `;
 
+BlockSvg.defaultProps = {
+	width: '24',
+	height: '24'
+}
+
 export const BaseSvg = ({
 	children,
 	role,
 	viewBox,
 	direction,
-	size,
 	...props
 }) => (
 	<BlockSvg
 		xmlns="http://www.w3.org/2000/svg"
 		role={role}
 		viewBox={viewBox}
-		height={size}
-		width={size}
 		{...props}
 	>
 		{children}

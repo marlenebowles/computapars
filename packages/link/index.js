@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
-import { animations } from '@computapars/core';
 import { darken } from 'polished';
+import { color } from 'styled-system';
+
 const BaseLink = styled.a`
+	${color}
 	display: inline-block;
-	transition: ${animations.all};
+	transition: all .3s ease-in-out;
 	text-decoration: none;
 	&:link,
 	&:visited,
@@ -21,28 +23,19 @@ const BaseLink = styled.a`
 `;
 
 export const StyledLink = styled(BaseLink)`
-	${props =>
-		props &&
-		props.type == 'primary' &&
+	${props => props.color == 'primary' &&
 		css`
-			&:link,
-			&:visited,
-			&:active {
+			&:link, &:visited, &:active {
 				color: ${props.theme.colors.primary};
 			}
-			&:hover,
-			&:focus {
+			&:hover, &:focus {
 				cursor: pointer;
 				color: ${darken(0.15, props.theme.colors.primary)};
 			}
 		`};
-	${props =>
-		props &&
-		props.type == 'secondary' &&
+	${props => props.color == 'secondary' &&
 		css`
-			&:link,
-			&:visited,
-			&:active {
+			&:link, &:visited, &:active {
 				color: ${props.theme.colors.secondary};
 			}
 			&:hover,

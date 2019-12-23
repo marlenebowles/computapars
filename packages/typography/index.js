@@ -1,82 +1,111 @@
 import styled, { css } from 'styled-components';
-import { typography, media } from '@computapars/core';
+import { color, space, typography } from 'styled-system';
 
 export const BaseText = styled.p`
-	font-family: ${props => props.theme.fonts.secondary};
-    font-weight: ${typography.weight.regular};
-    line-height: ${typography.lineHeight.md}
-    color: ${props => props.theme.colors.text};
+    ${color}
+    ${space}
+    ${typography}
 `;
+BaseText.defaultProps = {
+	fontFamily: 'secondary',
+	fontWeight: 'regular',
+	lineHeight: 'sm',
+	color: 'text',
+};
 
 export const Text = styled(BaseText)`
-	font-size: ${typography.size.sm};
-	${media.greaterThan('sm')`
-        font-size: ${typography.size.md};
-    `}
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.sm};
+		${theme.mediaQueries.sm} {
+			font-size: ${theme.fontSizes.md};
+		}
+	`}
 `;
 
 export const IntroText = styled(BaseText)`
-	font-size: ${typography.size.md};
-	${media.greaterThan('sm')`
-        font-size: ${typography.size.lg};
-    `}
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.md};
+		${theme.mediaQueries.sm} {
+			font-size: ${theme.fontSizes.lg};
+		}
+	`}
 `;
 
 export const FineText = styled(BaseText)`
-	font-size: ${typography.size.xs};
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.xs};
+	`}
 `;
 
 const baseHeader = css`
-	font-family: ${props => props.theme.fonts.primary};
-	color: ${props => props.theme.colors.text};
+	${color}
+	${space}
+	${typography}
 `;
+
+baseHeader.defaultProps = {
+	fontFamily: "primary",
+	color: "text",
+}
 
 export const H1 = styled.h1`
 	${baseHeader};
-	font-size: ${typography.size.xxl};
-	line-height: ${typography.lineHeight.xs};
-	${media.greaterThan('md')`
-        font-size: ${typography.size.xxxl}; 
-    `}
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.xxl};
+		line-height: ${theme.lineHeights.xs};
+		${theme.mediaQueries.sm} {
+        	font-size: ${theme.fontSizes.xxxl};
+    	}
+	`}
 `;
 
 export const H2 = styled.h2`
-    ${baseHeader};
-    font-size: ${typography.size.xl}
-	line-height: ${typography.lineHeight.sm};
-	${media.greaterThan('md')`
-	    font-size: ${typography.size.xxl};
-    `}
+	${baseHeader};
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.xl};
+		line-height: ${theme.lineHeights.sm};
+		${theme.mediaQueries.md} {
+        	font-size: ${theme.fontSizes.xxl};
+    	}
+	`}
 `;
 
 export const H3 = styled.h3`
 	${baseHeader};
-	font-size: ${typography.size.lg};
-	line-height: ${typography.lineHeight.sm};
-	${media.greaterThan('md')`
-        font-size: ${typography.size.xl};
-    `}
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.lg};
+		line-height: ${theme.lineHeights.sm};
+		${theme.mediaQueries.md} {
+        	font-size: ${theme.fontSizes.xl};
+    	}
+	`}
 `;
 
 export const H4 = styled.h4`
 	${baseHeader};
-	font-size: ${typography.size.md};
-	line-height: ${typography.lineHeight.sm};
-	${media.greaterThan('md')`
-	    font-size: ${typography.size.lg};
-    `}
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.md};
+		line-height: ${theme.lineHeights.sm};
+		${theme.mediaQueries.md} {
+        	font-size: ${theme.fontSizes.lg};
+    	}
+	`}
 `;
 
 export const H5 = styled.h5`
 	${baseHeader};
-	font-size: ${typography.size.md};
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.md};
+		line-height: ${theme.lineHeights.sm};
+	`}
 	text-transform: uppercase;
-	line-height: ${typography.lineHeight.sm};
 `;
 
 export const H6 = styled.h6`
 	${baseHeader};
-	font-size: ${typography.size.sm};
+	${({theme}) => css`
+		font-size: ${theme.fontSizes.sm};
+		line-height: ${theme.lineHeights.sm};
+	`}
 	text-transform: uppercase;
-	line-height: ${typography.lineHeight.sm};
 `;

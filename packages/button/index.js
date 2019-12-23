@@ -1,48 +1,49 @@
 import styled, { css } from 'styled-components';
-import { animations, border } from '@computapars/core';
 import { darken } from 'polished';
-import { space, layout, color } from 'styled-system';
+import { variant, height } from 'styled-system';
 
 const BaseButton = styled.button`
-    ${space}
-    ${layout}
-    ${color}
-	background: transparent;
-	border-radius: ${border.radius.default};
+    ${height}
+    ${({theme}) => css`
+        border-radius: ${theme.radii.default};
+        font-family: ${theme.fonts.primary};
+        font-weight: ${theme.fontWeights.bold};
+        letter-spacing: ${theme.letterSpacings.md};
+    `}
+    ${variant({
+        variants: {
+            primary: {
+                color: 'white',
+                bg: 'primary',
+            },
+            secondary: {
+                color: 'white',
+                bg: 'secondary',
+            },
+        }
+    })}
 	border: none;
 	padding: 0.25em 1em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: ${props => (props.type == 'submit' ? '40px' : 'auto')};
-	transition: ${animations.background};
-	font-family: ${props => props.theme.buttons.font};
-	font-weight: ${props => props.theme.buttons.weight};
-	text-transform: uppercase;
-	letter-spacing: ${props => props.theme.buttons.letterSpacing};
+	transition: background .3s ease-out, color .3s ease-out, opacity .3s ease-out;
+    text-transform: uppercase;
+    cursor: pointer;
 `;
+
 const Button = styled(BaseButton)`
-	${props =>
-		props &&
-		props.type == 'primary' &&
-		css`
-            cursor: pointer;
-            background: ${props.theme.colors.primary}
-            color: white;
+    ${props => props.variant == 'primary' &&
+        css`
             :hover, :focus {
                 background: ${darken(0.15, props.theme.colors.primary)};
             }
-    `};
-	${props =>
-		props &&
-		props.type == 'secondary' &&
+    `}
+    ${props => props.variant == 'secondary' &&
 		css`
-			cursor: pointer;
-            background: ${props.theme.colors.secondary}
-			color: white;
 			:hover, :focus {
                 background: ${darken(0.15, props.theme.colors.secondary)};
 			}
-		`};
+	`};
 `;
 export default Button;

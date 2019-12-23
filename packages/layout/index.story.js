@@ -14,7 +14,7 @@ export default {
 };
 
 export const contained = () => (
-	<Container bg="secondary" p={[1, 2, 3, 4]}>
+	<Container bg="secondary" p={['sm', 'md']}>
 		<div>cats</div>
 	</Container>
 );
@@ -38,7 +38,6 @@ export const HeroLayout = () => (
 	<HeroGrid>
 		<HeaderGrid></HeaderGrid>
 		<MainGrid>
-			<Divider />
 		</MainGrid>
 		<FooterGrid></FooterGrid>
 	</HeroGrid>

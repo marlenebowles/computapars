@@ -1,10 +1,10 @@
 {
 	"name": "@computapars/form",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"main": "index.js",
 	"license": "MIT",
 	"dependencies": {
-		"@computapars/icon": "^0.0.0",
+		"@computapars/icon": "^0.0.1",
 		"polished": "^3.4.2",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0"

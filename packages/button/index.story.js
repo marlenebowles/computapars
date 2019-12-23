@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './index';
+import Button from './src/index';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
@@ -17,7 +17,6 @@ export const buttons = () => {
 	};
 	const defaultValue = 'primary';
 	return (
-
 		<Button
 			variant={select(label, options, defaultValue)}
 			onClick={action('clicked')}

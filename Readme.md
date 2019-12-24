@@ -24,8 +24,28 @@ yarn run build-storybook
 
 The assets in the .out directory can be placed were you host your static assets.
 
-## Todo
+## To use lerna
 
--   npm package registry vs github
--   add directions on how to pubish
--   add stuff about token
+Each package uses an upward root mode option to compile js thats pointing to babel.config.js.
+
+In order to publish to npm, login with your credentials
+
+```
+npm login
+```
+
+Now that you are logged in you should build the packages.
+
+```
+yarn lerna-build
+```
+
+This command will build the dist files that consumers of the packages can import from.
+
+```
+lerna publish
+```
+
+This will walk you through the patching versions of each change it detects from the last publish. It will automatically change the version numbers in corresponding package.json files.
+
+Publish will also publish to npm if you are logged in.

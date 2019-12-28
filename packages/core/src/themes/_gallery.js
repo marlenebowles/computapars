@@ -100,6 +100,10 @@ export const gallery = {
 		lg: `@media screen and (min-width: ${992}px)`,
 	},
 	buttons: {
+		default: {
+			color: palette.white,
+			backgroundColor: palette.orange1,
+		},
 		primary: {
 			color: palette.white,
 			backgroundColor: palette.orange1,

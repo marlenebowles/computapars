@@ -4,7 +4,7 @@
 	"main": "./src/index.js",
 	"license": "MIT",
 	"scripts": {
-		"build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'"
+		"build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .js,.jsx --delete-dir-on-start --no-comments'"
 	},
 	"dependencies": {
 		"@computapars/icon": "^1.0.0",

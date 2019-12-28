@@ -3,6 +3,6 @@
 	"version": "1.0.1",
 	"main": "./src/index.js",
 	"scripts": {
-		"build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'"
+		"build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .js,.jsx --delete-dir-on-start --no-comments'"
 	}
 }

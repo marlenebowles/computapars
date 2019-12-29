@@ -49,9 +49,9 @@ export const gallery = {
 		black: '900',
 	},
 	fonts: {
-		splash: '"Bebas Neue", cursive',
-		primary: '"Bebas Neue", cursive',
-		secondary: '"Lato", sans-serif',
+		splash: '"Inter", Helvetica Neue, Arial, sans-serif',
+		primary: '"Inter", Helvetica Neue, Arial, sans-serif',
+		secondary: '"Source Serif Pro", serif',
 		code:
 			'"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
 	},

@@ -12,7 +12,7 @@ const palette = {
 
 export const gallery = {
 	name: 'gallery',
-	breakpoints: ['375px', '576p', '768p', '992px', '1200px'],
+	breakpoints: ['375px', '576px', '768px', '992px', '1200px'],
 	space: {
 		none: '0rem',
 		xs: '0.625rem',

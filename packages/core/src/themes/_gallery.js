@@ -7,6 +7,7 @@ const palette = {
 	white: '#fff',
 	orange1: '#FF462D',
 	blue1: '#4076dd',
+	black: '#000000',
 	red: '#de2362',
 };
 
@@ -38,9 +39,10 @@ export const gallery = {
 	},
 	letterSpacings: {
 		normal: 'normal',
-		sm: '-1px',
-		md: '1px',
-		lg: '2px',
+		xs: '-.3rem',
+		sm: '-.1rem',
+		md: '1rem',
+		lg: '2rem',
 	},
 	fontWeights: {
 		regular: '400',
@@ -93,6 +95,8 @@ export const gallery = {
 		divider: palette.grey4,
 		primary: palette.orange1,
 		secondary: palette.blue1,
+		white: palette.white,
+		black: palette.black,
 	},
 	mediaQueries: {
 		sm: `@media screen and (min-width: ${576}px)`,

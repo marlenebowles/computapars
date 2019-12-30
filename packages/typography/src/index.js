@@ -54,6 +54,7 @@ export const H1 = styled.h1`
 H1.defaultProps = {
 	fontFamily: 'primary',
 	color: 'text',
+	fontSize: 'xxxl',
 };
 
 export const H2 = styled.h2`

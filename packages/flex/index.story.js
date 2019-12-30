@@ -1,14 +1,23 @@
 import React, { Fragment } from 'react';
 import { FlexBox } from './src/index';
-
 export default {
 	title: 'Components | Flex',
 };
 
 export const FlexBoxFull = () => (
-	<FlexBox mt="lg" color="secondary" bg="primary">
-		<div>Hello</div>
-		<div>World</div>
+	<FlexBox
+		flexWrap="wrap"
+		height="100vh"
+		bg="secondary"
+		fontFamily="primary"
+		padding={20}
+	>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>Hello</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>World</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>Hello</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>World</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>Hello</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>World</FlexBox>
 	</FlexBox>
 );
 

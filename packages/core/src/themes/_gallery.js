@@ -12,7 +12,7 @@ const palette = {
 
 export const gallery = {
 	name: 'gallery',
-	breakpoints: [375, 576, 768, 992, 1200],
+	breakpoints: ['375px', '576p', '768p', '992px', '1200px'],
 	space: {
 		none: '0rem',
 		xs: '0.625rem',
@@ -130,3 +130,9 @@ export const gallery = {
 		modal: '800',
 	},
 };
+
+// aliases
+gallery.breakpoints.sm = gallery.breakpoints[0];
+gallery.breakpoints.md = gallery.breakpoints[1];
+gallery.breakpoints.lg = gallery.breakpoints[2];
+gallery.breakpoints.xl = gallery.breakpoints[3];

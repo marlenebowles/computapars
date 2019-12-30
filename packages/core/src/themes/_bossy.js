@@ -12,7 +12,7 @@ const palette = {
 
 export const bossy = {
 	name: 'bossy',
-	breakpoints: [375, 576, 768, 992, 1200],
+	breakpoints: ['375px', '576p', '768p', '992px', '1200px'],
 	space: {
 		none: '0rem',
 		xs: '0.625rem',
@@ -126,3 +126,9 @@ export const bossy = {
 		modal: '800',
 	},
 };
+
+// aliases
+bossy.breakpoints.sm = bossy.breakpoints[0];
+bossy.breakpoints.md = bossy.breakpoints[1];
+bossy.breakpoints.lg = bossy.breakpoints[2];
+bossy.breakpoints.xl = bossy.breakpoints[3];

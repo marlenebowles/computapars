@@ -4,7 +4,6 @@
 	"scripts": {
 		"storybook": "start-storybook -p 5555",
 		"build-storybook": "build-storybook -c .storybook -o .out",
-		"lerna-build": "lerna exec --parallel 'BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .js,.jsx --delete-dir-on-start --no-comments'",
 		"build": "build-storybook -c .storybook -o public"
 	},
 	"devDependencies": {

@@ -3,9 +3,6 @@
 	"version": "1.0.0",
 	"main": "./src/index.js",
 	"license": "MIT",
-	"scripts": {
-		"build": "lerna exec --parallel 'BABEL_ENV=build babel --root-mode upward src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments'"
-	},
 	"dependencies": {
 		"@computapars/icon": "^1.0.0",
 		"polished": "^3.4.2",

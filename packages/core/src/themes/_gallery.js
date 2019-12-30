@@ -12,7 +12,7 @@ const palette = {
 
 export const gallery = {
 	name: 'gallery',
-	breakpoints: [375, 576, 768, 992, 1200],
+	breakpoints: ['375px', '576px', '768px', '992px', '1200px'],
 	space: {
 		none: '0rem',
 		xs: '0.625rem',
@@ -49,9 +49,9 @@ export const gallery = {
 		black: '900',
 	},
 	fonts: {
-		splash: '"Bebas Neue", cursive',
-		primary: '"Bebas Neue", cursive',
-		secondary: '"Lato", sans-serif',
+		splash: '"Inter", Helvetica Neue, Arial, sans-serif',
+		primary: '"Inter", Helvetica Neue, Arial, sans-serif',
+		secondary: '"Source Serif Pro", serif',
 		code:
 			'"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
 	},
@@ -100,6 +100,10 @@ export const gallery = {
 		lg: `@media screen and (min-width: ${992}px)`,
 	},
 	buttons: {
+		default: {
+			color: palette.white,
+			backgroundColor: palette.orange1,
+		},
 		primary: {
 			color: palette.white,
 			backgroundColor: palette.orange1,
@@ -126,3 +130,9 @@ export const gallery = {
 		modal: '800',
 	},
 };
+
+// aliases
+gallery.breakpoints.sm = gallery.breakpoints[0];
+gallery.breakpoints.md = gallery.breakpoints[1];
+gallery.breakpoints.lg = gallery.breakpoints[2];
+gallery.breakpoints.xl = gallery.breakpoints[3];

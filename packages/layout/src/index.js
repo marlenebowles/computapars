@@ -1,9 +1,9 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import { space, color } from 'styled-system';
 
 export const Divider = styled.div`
 	${space}
-	${({theme}) => css`
+	${({ theme }) => css`
 		margin-bottom: ${theme.space.md} !important;
 		margin-top: ${theme.space.md} !important;
 		background: ${theme.colors.divider};
@@ -18,7 +18,7 @@ export const Divider = styled.div`
 export const Container = styled.div`
 	${color}
 	${space}
-	${({theme}) => css`
+	${({ theme }) => css`
 		${theme.mediaQueries.sm} {
 			max-width: ${theme.sizes.maxWidths.sm}px;
 		}
@@ -26,7 +26,7 @@ export const Container = styled.div`
 			max-width: ${theme.sizes.maxWidths.md}px;
 		}
 		${theme.mediaQueries.lg} {
-        	max-width: ${theme.sizes.maxWidths.lg}px;
+			max-width: ${theme.sizes.maxWidths.lg}px;
 		}
 	`}	
 	display: block;
@@ -66,13 +66,13 @@ export const HolyGrailGrid = styled.div`
 		grid-template-columns: 1fr;
 		grid-template-rows: 50px 1fr;
 		grid-template-areas: 'sidenav';
-		${({theme}) => css`
+		${({ theme }) => css`
 			${theme.mediaQueries.sm} {
 				grid-template-columns: 240px 1fr;
-            	grid-template-rows: 1fr;
-            	grid-template-areas: 'sidenav main';
+				grid-template-rows: 1fr;
+				grid-template-areas: 'sidenav main';
 			}
-		`}	
+		`}
 	}
 `;
 

@@ -23,7 +23,7 @@ export const Container = styled.div`
 			max-width: ${theme.sizes.maxWidths.sm}px;
 		}
 		${theme.mediaQueries.md} {
-			max-width: ${theme.sizes.maxWidths.md}px;
+			max-width: ${theme.sizes.maxWidths.lg}px;
 		}
 		${theme.mediaQueries.lg} {
 			max-width: ${theme.sizes.maxWidths.lg}px;

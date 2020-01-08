@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from './src/index';
+import React, { Fragment } from 'react';
+import { Button, LinkButton} from './src/index';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
@@ -17,12 +17,15 @@ export const buttons = () => {
 	};
 	const defaultValue = 'primary';
 	return (
-		<Button
-			variant={select(label, options, defaultValue)}
-			onClick={action('clicked')}
-			height={30}
-		>
-			Lorem Ipsum
-		</Button>
+		<Fragment>
+			<Button
+				variant={select(label, options, defaultValue)}
+				onClick={action('clicked')}
+				height={30}
+			>
+				Lorem Ipsum
+			</Button>
+			<LinkButton>Lorem Ipsum</LinkButton>
+		</Fragment>
 	);
 };

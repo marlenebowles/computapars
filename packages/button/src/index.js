@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
-import { variant, height } from 'styled-system';
+import { variant, height, color } from 'styled-system';
 
 const BaseButton = styled.button`
     ${height}
@@ -32,7 +32,7 @@ const BaseButton = styled.button`
     cursor: pointer;
 `;
 
-const Button = styled(BaseButton)`
+export const Button = styled(BaseButton)`
     ${props => props.variant == 'primary' &&
         css`
             :hover, :focus {
@@ -46,4 +46,20 @@ const Button = styled(BaseButton)`
 			}
 	`};
 `;
-export default Button;
+
+
+export const LinkButton = styled('button')`
+    ${height}
+    ${color}
+    border: none;
+	transition: all .3s ease-out, color .3s ease-out, opacity .3s ease-out;
+    cursor: pointer;
+    text-transform: capitalize;
+    outline: none;
+    ${({theme}) => css`
+        font-family: ${theme.fonts.primary};
+        font-weight: ${theme.fontWeights.bold};
+        letter-spacing: normal;
+
+    `}
+`;

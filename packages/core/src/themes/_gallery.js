@@ -5,10 +5,16 @@ const palette = {
 	grey4: '#eaeaea',
 	grey5: '#FAFAFA',
 	white: '#fff',
-	orange1: '#FF462D',
-	blue1: '#4076dd',
-	black: '#000000',
+	orange: '#FF462D',
+	blue: '#4076dd',
+	black: '#070707',
 	red: '#de2362',
+	pastelRed: '#FF6B5E',
+	englishGreen: '#1A535C',
+	sunglow: '#FFCA3A',
+	charcoal: '#2E4057',
+	navy: '#011627',
+	mdPurple: '#0D0633'
 };
 
 export const gallery = {
@@ -47,7 +53,7 @@ export const gallery = {
 	fontWeights: {
 		regular: '400',
 		bold: '700',
-		extrabold: '800',
+		extraBold: '800',
 		black: '900',
 	},
 	fonts: {
@@ -88,13 +94,17 @@ export const gallery = {
 	colors: {
 		error: palette.red,
 		input: palette.grey2,
-		focus: palette.blue1,
+		focus: palette.blue,
 		border: palette.grey4,
 		text: palette.grey1,
 		disabled: palette.grey5,
 		divider: palette.grey4,
-		primary: palette.orange1,
-		secondary: palette.blue1,
+		primary: palette.pastelRed,
+		secondary: palette.englishGreen,
+		yellow: palette.sunglow,
+		charcoal: palette.charcoal,
+		navy: palette.navy,
+		mdPurple: palette.mdPurple,
 		white: palette.white,
 		black: palette.black,
 	},
@@ -106,15 +116,15 @@ export const gallery = {
 	buttons: {
 		default: {
 			color: palette.white,
-			backgroundColor: palette.orange1,
+			backgroundColor: palette.englishGreen,
 		},
 		primary: {
 			color: palette.white,
-			backgroundColor: palette.orange1,
+			backgroundColor: palette.englishGreen,
 		},
 		secondary: {
 			color: palette.white,
-			backgroundColor: palette.blue1,
+			backgroundColor: palette.pastelRed,
 		},
 		danger: {
 			color: palette.white,

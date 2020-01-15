@@ -15,6 +15,7 @@ import {
 	AccountCircle,
 	Assignment,
 	Delete,
+	Email,
 	Minimize,
 	OpenInNew,
 	Swap,
@@ -24,6 +25,7 @@ import {
 	Add,
 	UserAdd,
 	Settings,
+	Link,
 } from './svgs';
 
 export const GithubIcon = Github;
@@ -51,3 +53,5 @@ export const CreateIcon = Create;
 export const AddIcon = Add;
 export const UserAddIcon = UserAdd;
 export const SettingsIcon = Settings;
+export const EmailIcon = Email;
+export const LinkIcon = Link;

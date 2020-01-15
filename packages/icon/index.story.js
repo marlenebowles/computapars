@@ -25,6 +25,7 @@ import {
 	AddIcon,
 	UserAddIcon,
 	SettingsIcon,
+	EmailIcon,
 } from './src/index';
 
 export default {
@@ -54,6 +55,7 @@ export const material = () => (
 		<AccountCircleIcon hover />
 		<AssignmentIcon hover />
 		<DeleteIcon hover />
+		<EmailIcon hover />
 		<MinimizeIcon hover />
 		<OpenInNewIcon hover />
 		<SwapIcon />

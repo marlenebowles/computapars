@@ -18,15 +18,20 @@ export const Divider = styled.div`
 export const Container = styled.div`
 	${color}
 	${space}
-	${({ theme }) => css`
+    ${({ theme }) => css`
+        padding: ${theme.space.sm};
+		max-width: ${theme.sizes.maxWidths.sm}px;
 		${theme.mediaQueries.sm} {
-			max-width: ${theme.sizes.maxWidths.sm}px;
+            padding: ${theme.space.md};
+			max-width: ${theme.sizes.maxWidths.md}px;
 		}
 		${theme.mediaQueries.md} {
+            padding: ${theme.space.md};
 			max-width: ${theme.sizes.maxWidths.lg}px;
 		}
 		${theme.mediaQueries.lg} {
-			max-width: ${theme.sizes.maxWidths.lg}px;
+            padding: ${theme.space.lg}
+			max-width: ${theme.sizes.maxWidths.xl}px;
 		}
 	`}	
 	display: block;

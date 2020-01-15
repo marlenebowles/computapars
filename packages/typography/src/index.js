@@ -25,7 +25,7 @@ export const Text = styled(BaseText)`
 
 export const IntroText = styled(BaseText)`
 	${({ theme }) => css`
-		font-size: ${theme.fontSizes.lg};
+		font-size: ${theme.fontSizes.xl};
 		${theme.mediaQueries.sm} {
 			font-size: ${theme.fontSizes.xl};
 		}

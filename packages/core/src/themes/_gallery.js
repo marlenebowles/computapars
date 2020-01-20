@@ -5,9 +5,15 @@ const palette = {
 	grey4: '#eaeaea',
 	grey5: '#FAFAFA',
 	white: '#fff',
-	orange1: '#FF462D',
-	blue1: '#4076dd',
+	orange: '#FF462D',
+	blue: '#4076dd',
+	black: '#00000',
 	red: '#de2362',
+	charcoal: '#2E4057',
+	coral: '#FF6B5E',
+	grey: '#1a1a1a',
+	teal: '#224a54',
+	calmBlue: '#98bec8',
 };
 
 export const gallery = {
@@ -19,12 +25,13 @@ export const gallery = {
 		sm: '1.25rem',
 		md: '1.875rem',
 		lg: '2rem',
+		xl: '3rem',
 		auto: 'auto',
 	},
 	fontSizes: {
 		xs: '0.75rem', // 12
 		sm: '0.875rem', // 14
-		md: '1rem', // 16
+		md: '1.15rem', // 18
 		lg: '1.25rem', // 20
 		xl: '1.50rem', // 24
 		xxl: '2.25rem', // 36
@@ -37,15 +44,17 @@ export const gallery = {
 		md: '1.5',
 	},
 	letterSpacings: {
+		tight: '-.3rem',
 		normal: 'normal',
-		sm: '-1px',
-		md: '1px',
-		lg: '2px',
+		xs: '-.2rem',
+		sm: '-.02rem',
+		md: '.1rem',
+		lg: '.2rem',
 	},
 	fontWeights: {
 		regular: '400',
 		bold: '700',
-		extrabold: '800',
+		extraBold: '800',
 		black: '900',
 	},
 	fonts: {
@@ -86,13 +95,20 @@ export const gallery = {
 	colors: {
 		error: palette.red,
 		input: palette.grey2,
-		focus: palette.blue1,
+		focus: palette.blue,
 		border: palette.grey4,
 		text: palette.grey1,
 		disabled: palette.grey5,
 		divider: palette.grey4,
-		primary: palette.orange1,
-		secondary: palette.blue1,
+		primary: palette.charcoal,
+		secondary: palette.coral,
+		charcoal: palette.charcoal,
+		grey: palette.grey,
+		teal: palette.teal,
+		white: palette.white,
+		black: palette.black,
+		coral: palette.coral,
+		calmBlue: palette.calmBlue,
 	},
 	mediaQueries: {
 		sm: `@media screen and (min-width: ${576}px)`,
@@ -102,15 +118,19 @@ export const gallery = {
 	buttons: {
 		default: {
 			color: palette.white,
-			backgroundColor: palette.orange1,
+			backgroundColor: palette.charcoal,
 		},
 		primary: {
 			color: palette.white,
-			backgroundColor: palette.orange1,
+			backgroundColor: palette.charcoal,
+		},
+		transparent: {
+			color: palette.white,
+			backgroundColor: 'transparent',
 		},
 		secondary: {
 			color: palette.white,
-			backgroundColor: palette.blue1,
+			backgroundColor: palette.pastelRed,
 		},
 		danger: {
 			color: palette.white,

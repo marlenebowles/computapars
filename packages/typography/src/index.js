@@ -16,7 +16,7 @@ BaseText.defaultProps = {
 
 export const Text = styled(BaseText)`
 	${({ theme }) => css`
-		font-size: ${theme.fontSizes.sm};
+		font-size: ${theme.fontSizes.md};
 		${theme.mediaQueries.sm} {
 			font-size: ${theme.fontSizes.md};
 		}
@@ -25,9 +25,9 @@ export const Text = styled(BaseText)`
 
 export const IntroText = styled(BaseText)`
 	${({ theme }) => css`
-		font-size: ${theme.fontSizes.md};
+		font-size: ${theme.fontSizes.xl};
 		${theme.mediaQueries.sm} {
-			font-size: ${theme.fontSizes.lg};
+			font-size: ${theme.fontSizes.xl};
 		}
 	`}
 `;
@@ -54,6 +54,7 @@ export const H1 = styled.h1`
 H1.defaultProps = {
 	fontFamily: 'primary',
 	color: 'text',
+	fontSize: 'xxxl',
 };
 
 export const H2 = styled.h2`

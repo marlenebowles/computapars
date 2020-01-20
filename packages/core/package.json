@@ -2,5 +2,5 @@
 	"name": "@computapars/core",
 	"version": "1.0.3",
 	"main": "./src/index.js",
-	"gitHead": "d2116e77b82cdfca76eb1f35590481c4b1edc56b"
+	"gitHead": "cadfeb80815e761d900bb40343aae7655d0ae4bc"
 }

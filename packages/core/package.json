@@ -1,6 +1,6 @@
 {
 	"name": "@computapars/core",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "./src/index.js",
 	"gitHead": "cadfeb80815e761d900bb40343aae7655d0ae4bc"
 }

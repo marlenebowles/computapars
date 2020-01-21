@@ -1,6 +1,5 @@
 import { themes } from '@computapars/core';
 import { ThemeProvider } from 'styled-components';
-import { DefaultLayout } from '@computapars/layout';
 ThemeProvider.defaultProps = {
 	theme: {},
 };

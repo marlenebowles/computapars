@@ -16,10 +16,11 @@ yarn install
 yarn run storybook
 ```
 
-This will run storbook locally on port 5555, if you are trying to deploy a static version of the compiled storybook assets.
+This will run storybook locally on port 5555, if you are trying to deploy a static version of the compiled storybook assets.
 
 ```
 yarn run build-storybook
+now
 ```
 
 The assets in the .out directory can be placed were you host your static assets.
@@ -34,18 +35,16 @@ In order to publish to npm, login with your credentials
 npm login
 ```
 
-Now that you are logged in you should build the packages.
+Now that you are logged in you should be able to build the packages with.
 
 ```
 yarn lerna-build
 ```
 
-This command will build the dist files that consumers of the packages can import from.
+This will walk you through the patching versions of each change it detects from the last publish. It will automatically change the version numbers in corresponding package.json files.
 
 ```
 lerna publish
 ```
 
-This will walk you through the patching versions of each change it detects from the last publish. It will automatically change the version numbers in corresponding package.json files.
-
-Publish will also publish to npm if you are logged in.
+Publish will also publish to npm if you are logged in. Make sure to allow public/private access depending on the goal of your monrepo.

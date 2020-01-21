@@ -49,9 +49,9 @@ export const bossy = {
 		black: '900',
 	},
 	fonts: {
-		splash: '"Bebas Neue", cursive',
-		primary: '"Bebas Neue", cursive',
-		secondary: '"Lato", sans-serif',
+		splash: '"Rubik", sans-serif',
+		primary: '"Rubik", sans-serif',
+		secondary: '"Karla", sans-serif',
 		code:
 			'"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
 	},

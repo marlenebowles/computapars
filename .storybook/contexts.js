@@ -1,6 +1,5 @@
 import { themes } from '@computapars/core';
 import { ThemeProvider } from 'styled-components';
-import { DefaultLayout } from '@computapars/layout';
 ThemeProvider.defaultProps = {
 	theme: {},
 };
@@ -17,11 +16,13 @@ export const contexts = [
 			{
 				name: 'Gallery',
 				props: { theme: themes.gallery },
-				default: true,
+				default: false,
 			},
 			{
 				name: 'Bossy',
 				props: { theme: themes.bossy },
+				default: true,
+
 			},
 		],
 		options: {

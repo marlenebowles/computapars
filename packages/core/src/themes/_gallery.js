@@ -130,7 +130,7 @@ export const gallery = {
 		},
 		secondary: {
 			color: palette.white,
-			backgroundColor: palette.pastelRed,
+			backgroundColor: palette.coral,
 		},
 		danger: {
 			color: palette.white,

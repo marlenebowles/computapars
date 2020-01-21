@@ -26,6 +26,7 @@ import {
 	UserAdd,
 	Settings,
 	Link,
+	Disco,
 } from './svgs';
 
 export const GithubIcon = Github;
@@ -55,3 +56,4 @@ export const UserAddIcon = UserAdd;
 export const SettingsIcon = Settings;
 export const EmailIcon = Email;
 export const LinkIcon = Link;
+export const DiscoIcon = Disco;

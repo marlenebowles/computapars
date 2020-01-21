@@ -16,11 +16,13 @@ export const contexts = [
 			{
 				name: 'Gallery',
 				props: { theme: themes.gallery },
-				default: true,
+				default: false,
 			},
 			{
 				name: 'Bossy',
 				props: { theme: themes.bossy },
+				default: true,
+
 			},
 		],
 		options: {

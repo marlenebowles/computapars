@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Text, H1, H3, H5 } from '@computapars/typography';
-import { Link } from '@computapars/link';
 import { FlexBox } from '@computapars/flex';
 import { DiscoIcon} from '@computapars/icon';
 

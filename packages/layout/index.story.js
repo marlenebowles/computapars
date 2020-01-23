@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Text } from '@computapars/typography';
 import {
 	Divider,
 	HolyGrailGrid,
@@ -15,29 +16,37 @@ export default {
 
 export const contained = () => (
 	<Container bg="secondary" p={['sm', 'md']}>
-		<div>cats</div>
+		<Text>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum.
+		</Text>
 	</Container>
 );
 export const divider = () => (
-	<Fragment>
+	<Container>
 		<Divider />
-	</Fragment>
+	</Container>
 );
 
 export const HolyGrailLayout = () => (
-	<HolyGrailGrid>
-		<HeaderGrid></HeaderGrid>
-		<MainGrid>
-			<AsideGrid></AsideGrid>
+	<HolyGrailGrid bg="primary">
+		<HeaderGrid bg="secondary"></HeaderGrid>
+		<MainGrid bg="error">
+			<AsideGrid bg="primary"></AsideGrid>
 		</MainGrid>
-		<FooterGrid></FooterGrid>
+		<FooterGrid bg="secondary"></FooterGrid>
 	</HolyGrailGrid>
 );
 
 export const HeroLayout = () => (
-	<HeroGrid>
-		<HeaderGrid></HeaderGrid>
-		<MainGrid></MainGrid>
-		<FooterGrid></FooterGrid>
+	<HeroGrid bg="primary">
+		<HeaderGrid bg="secondary"></HeaderGrid>
+		<MainGrid bg="error"></MainGrid>
+		<FooterGrid bg="secondary"></FooterGrid>
 	</HeroGrid>
 );

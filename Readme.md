@@ -1,6 +1,6 @@
 ## About Computapars
 
-Computapars is a react component design system using Lerna for package management and Storybook for exploring. 
+Computapars is a react component design system using Lerna for package management and Storybook for exploring.
 It's currently being deployed through Zeit Now.
 
 Each "package" is a component with its own set of tests. Each package can be individually installed in a project through npm or yarn.
@@ -51,3 +51,8 @@ lerna publish
 
 Publish will also publish to npm if you are logged in.
 Make sure to allow public/private access depending on the goal of your monrepo.
+
+## Future Improvements
+
+-   typescript
+-   jest testing

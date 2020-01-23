@@ -40,21 +40,21 @@ export const Container = styled.div`
 
 export const HeaderGrid = styled.header`
 	grid-area: header;
-	background-color: #648ca6;
+	${color}
 `;
 
 export const AsideGrid = styled.aside`
 	grid-area: sidenav;
-	background-color: #394263;
+	${color}
 `;
 export const MainGrid = styled.main`
 	grid-area: main;
-	background-color: #8fd4d9;
+	${color}
 `;
 
 export const FooterGrid = styled.footer`
 	grid-area: footer;
-	background-color: #648ca6;
+	${color}
 `;
 
 export const HolyGrailGrid = styled.div`
@@ -82,6 +82,7 @@ export const HolyGrailGrid = styled.div`
 `;
 
 export const HeroGrid = styled.div`
+	${color}
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 50px 1fr 50px;

@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react';
-import { Text, H1, H3, H5 } from '@computapars/typography';
+import React from 'react';
+import { Text, H1, H3 } from '@computapars/typography';
 import { FlexBox } from '@computapars/flex';
 import { DiscoIcon } from '@computapars/icon';
+import {Link} from '@computapars/link';
 
 export default {
 	title: 'Computapars | About',
@@ -28,10 +29,16 @@ export const welcome = () => (
 				<i>Definition:</i> Latin in origin, meaning computer party.
 			</H3>
 			<DiscoIcon size={60} />
-			<Text fontFamily="primary" color="white">
-				A reusable React component library designed to help build
-				personal projects <i>faster</i>. Party.
-			</Text>
+			<FlexBox flexDirection="column" alignItems="center" justifyContent="center" paddingTop="sm" width="80vw">
+				<Text fontFamily="primary" color="white">
+					A reusable React component library using  <Link variant="primary" href="https://styled-components.com/" label="Styled Components"/> and <Link variant="primary" href="https://styled-system.com/" label="Styled System"/> - designed to help build
+					personal projects <i>faster</i>. Party.
+				</Text>
+				<Text fontFamily="primary" color="white">
+					Explore theming, by toggling between the available themes, Gallery and Bossy.
+				</Text>
+			</FlexBox>
+			
 		</FlexBox>
 	</FlexBox>
 );

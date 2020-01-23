@@ -26,5 +26,5 @@ export default create({
 	inputBorderRadius: 4,
 	brandTitle: 'Computapars',
 	brandUrl: 'https://computapars.marlenebowles.now.sh',
-	brandImage: 'https://placehold.it/350x150',
+	brandImage: 'https://computapars.s3.amazonaws.com/computpars.png',
 });

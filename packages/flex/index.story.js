@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 import { FlexBox } from './src/index';
+import { Text } from '@computapars/typography';
 export default {
 	title: 'Components | Flex',
 };
 
-export const FlexBoxFull = () => (
+export const FlexBoxFullResponsive = () => (
 	<FlexBox
 		flexWrap="wrap"
 		height="100vh"
@@ -12,46 +13,34 @@ export const FlexBoxFull = () => (
 		fontFamily="primary"
 		padding={20}
 	>
-		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>Hello</FlexBox>
-		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>World</FlexBox>
-		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>Hello</FlexBox>
-		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>World</FlexBox>
-		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>Hello</FlexBox>
-		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>World</FlexBox>
-	</FlexBox>
-);
-
-export const FlexBoxCenter = () => (
-	<FlexBox>
-		<FlexBox order="2">World</FlexBox>
-		<FlexBox order="1">Hello</FlexBox>
-	</FlexBox>
-);
-
-export const FlexBoxInlineResponsive = () => (
-	<Fragment>
-		<FlexBox>
-			<FlexBox>
-				<div order="2">World</div>
-				<div order="1">Hello</div>
-			</FlexBox>
-			<FlexBox>
-				<div order="2">World</div>
-				<div order="1">Hello</div>
-			</FlexBox>
-			<FlexBox>
-				<div order="2">World</div>
-				<div order="1">Hello</div>
-			</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>
+			<Text>Lorem</Text>
 		</FlexBox>
-	</Fragment>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>
+			<Text>Ipsum</Text>	
+		</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>
+			<Text>Dolor</Text>	
+		</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>
+			<Text>Sit</Text>	
+		</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>
+			<Text>Amet</Text>	
+		</FlexBox>
+		<FlexBox width={[1, 1 / 2, 1 / 3, 1 / 4, 1 / 6]}>
+			<Text>Plurum</Text>	
+		</FlexBox>
+	</FlexBox>
 );
 
 export const FlexBoxJustify = () => (
-	<Fragment>
+	<FlexBox bg="primary" height={'100vh'} flexDirection="column" justifyContent="center" alignItems="center">
 		<FlexBox>
-			<div>Hello</div>
-			<div>World</div>
+			<Text>Lorem</Text>	
 		</FlexBox>
-	</Fragment>
+		<FlexBox>
+			<Text>Ipsum</Text>	
+		</FlexBox>
+	</FlexBox>
 );

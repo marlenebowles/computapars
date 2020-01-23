@@ -1,10 +1,21 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
-import { color } from 'styled-system';
+import { color, variant, typography } from 'styled-system';
 
 const BaseLink = styled.a`
-	${color}
+    ${color}
+    ${typography}
+	${variant({
+		variants: {
+			primary: {
+				color: 'primary',
+			},
+			secondary: {
+				color: 'secondary',
+			},
+		},
+	})}
 	display: inline-block;
 	transition: all 0.3s ease-in-out;
 	text-decoration: none;
@@ -24,12 +35,14 @@ const BaseLink = styled.a`
 
 const StyledLink = styled(BaseLink)`
 	${props =>
-		props.color == 'primary' &&
+		props.variant == 'primary' &&
 		css`
+			font-family: ${props.theme.fonts.primary};
 			&:link,
 			&:visited,
 			&:active {
 				color: ${props.theme.colors.primary};
+				text-decoration: none;
 			}
 			&:hover,
 			&:focus {
@@ -38,12 +51,14 @@ const StyledLink = styled(BaseLink)`
 			}
 		`};
 	${props =>
-		props.color == 'secondary' &&
+		props.variant == 'secondary' &&
 		css`
+			font-family: ${props.theme.fonts.secondary};
 			&:link,
 			&:visited,
 			&:active {
 				color: ${props.theme.colors.secondary};
+				text-decoration: none;
 			}
 			&:hover,
 			&:focus {

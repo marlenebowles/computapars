@@ -3,7 +3,7 @@
 Computapars is a react component design system using Lerna for package management and Storybook for exploring.
 It's currently being deployed through Zeit Now.
 
-Each "package" is a component with its own set of tests. Each package can be individually installed in a project through npm or yarn.
+Each package can be individually installed in a project through npm or yarn however all packages have a dependency on @computapars/core.
 
 ## Scripts
 
